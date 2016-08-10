@@ -1,0 +1,13 @@
+
+	filebuffPtr->pubseekpos(0);
+	//GameLogger::Log(LogMsgType::cDebug, "pubseek success");
+	filebuffPtr->sgetn(returnBuff, bufflen);
+	//GameLogger::Log(LogMsgType::cDebug, "sgetn success");
+	filestream.close();
+	//GameLogger::Log(LogMsgType::cDebug, "close success");
+//GameLogger::Log(LogMsgType::cDebug, "sgetn success");
+	filestream.close();
+	//GameLogger::Log(LogMsgType::cDebug, "close success");
+//GameLogger::Log(LogMsgType::cDebug, "sgetn success");
+	filestream.close();
+	//GameLogger::Log(LogMsgType::cDebug, "close success");

@@ -1,0 +1,2524 @@
+2016-08-08 12:28:06:684[Process      ] GameLogger::Initialize() opened log file [..\Data\LogFiles\2016-08-08 12-28-06.BodaciousQuest.log] for writing
+2016-08-08 12:28:06:684[Info         ] GameLogger::Initialize() successful
+2016-08-08 12:28:06:684[Process      ] ConfigReader opened [..\Data\BodaciousQuest.config] successfully
+2016-08-08 12:28:06:684[Info         ] ConfigReader initialized successfully
+2016-08-08 12:28:06:684[Info         ] Valid KVP [BodaciousQuest.ShowFullScreen] [false] added
+2016-08-08 12:28:06:684[Info         ] Valid KVP [BodaciousQuest.FpsInterval] [5.0] added
+2016-08-08 12:28:06:687[Info         ] Valid KVP [BodaciousQuest.EnableControls] [true] added
+2016-08-08 12:28:06:687[Info         ] Valid KVP [BodaciousQuest.LoadCubeFirst] [true] added
+2016-08-08 12:28:06:687[Info         ] Valid KVP [BodaciousQuest.CameraWalkMode] [false] added
+2016-08-08 12:28:06:687[Info         ] Valid KVP [BodaciousQuest.GridSize] [40] added
+2016-08-08 12:28:06:687[Info         ] Valid KVP [ObjConverter.Mode.VertexType] [pn] added
+2016-08-08 12:28:06:687[Info         ] Valid KVP [ObjConverter.Mode.Analyze] [false] added
+2016-08-08 12:28:06:687[Info         ] Valid KVP [ObjConverter.Model] [Chicken] added
+2016-08-08 12:28:06:687[Info         ] Valid KVP [ObjConverter.Color] [random] added
+2016-08-08 12:28:06:687[Info         ] Valid KVP [ObjConverter.Obj.InputFileFolder] [..\\Data\\Objs\\] added
+2016-08-08 12:28:06:687[Info         ] Valid KVP [ObjConverter.Scene.OutputFileFolder] [..\\Data\\Scenes\\] added
+2016-08-08 12:28:06:687[Info         ] Valid KVP [ObjConverter.Model.Dargon.NumVerts] [57967] added
+2016-08-08 12:28:06:687[Info         ] Valid KVP [ObjConverter.Model.Dargon.NumIndices] [337824] added
+2016-08-08 12:28:06:687[Info         ] Valid KVP [ObjConverter.Model.Dargon.NumTexCoords] [60175] added
+2016-08-08 12:28:06:687[Info         ] Valid KVP [ObjConverter.Model.Dargon.NumNormals] [0] added
+2016-08-08 12:28:06:687[Info         ] Valid KVP [ObjConverter.Model.Pyramid.NumVerts] [5] added
+2016-08-08 12:28:06:687[Info         ] Valid KVP [ObjConverter.Model.Pyramid.NumIndices] [18] added
+2016-08-08 12:28:06:687[Info         ] Valid KVP [ObjConverter.Model.Pyramid.NumTexCoords] [10] added
+2016-08-08 12:28:06:687[Info         ] Valid KVP [ObjConverter.Model.Pyramid.NumNormals] [16] added
+2016-08-08 12:28:06:687[Info         ] Valid KVP [ObjConverter.Model.AIWorld.NumVerts] [1957] added
+2016-08-08 12:28:06:687[Info         ] Valid KVP [ObjConverter.Model.AIWorld.NumIndices] [8718] added
+2016-08-08 12:28:06:687[Info         ] Valid KVP [ObjConverter.Model.AIWorld.NumTexCoords] [4186] added
+2016-08-08 12:28:06:687[Info         ] Valid KVP [ObjConverter.Model.AIWorld.NumNormals] [5418] added
+2016-08-08 12:28:06:687[Info         ] Valid KVP [ObjConverter.Model.GameWeapon.NumVerts] [2068] added
+2016-08-08 12:28:06:687[Info         ] Valid KVP [ObjConverter.Model.GameWeapon.NumIndices] [9894] added
+2016-08-08 12:28:06:687[Info         ] Valid KVP [ObjConverter.Model.GameWeapon.NumTexCoords] [0] added
+2016-08-08 12:28:06:687[Info         ] Valid KVP [ObjConverter.Model.GameWeapon.NumNormals] [0] added
+2016-08-08 12:28:06:687[Info         ] Valid KVP [ObjConverter.Model.Chicken.NumVerts] [224] added
+2016-08-08 12:28:06:687[Info         ] Valid KVP [ObjConverter.Model.Chicken.NumIndices] [1374] added
+2016-08-08 12:28:06:687[Info         ] Valid KVP [ObjConverter.Model.Chicken.NumTexCoords] [472] added
+2016-08-08 12:28:06:687[Info         ] Valid KVP [ObjConverter.Model.Chicken.NumNormals] [565] added
+2016-08-08 12:28:06:796[Process      ] ShaderManager Initialized successfully
+2016-08-08 12:28:06:796[cInfo        ] Shader Init started
+2016-08-08 12:28:06:797[cInfo        ] Shader Program created.
+2016-08-08 12:28:06:798[cProcess     ] ShaderProgram::Initialize()[1] successful!
+2016-08-08 12:28:06:800[Debug        ] File [..\Data\shaders\debug.vert.shader] Opened successfully! Buffer Length:[291]
+2016-08-08 12:28:06:800[Debug        ] Shader file [..\Data\shaders\debug.vert.shader] contents:
+//BEGIN
+#version 430 core
+
+layout(location = 0)  in vec3 vPosition;
+
+layout(location = 15) uniform vec3 colorin;
+layout(location = 16) uniform mat4 MAT;
+
+out vec4 color;
+
+void main()
+{
+	vec4 vertPos = vec4(vPosition, 1.0);
+	gl_Position = MAT *  vertPos;
+	color = vec4(colorin, 1.0);
+}
+//END
+
+2016-08-08 12:28:06:800[Debug        ]  ShaderProgram::AddShader() file with data was read in
+2016-08-08 12:28:06:801[Debug        ] ShaderProgram::AddShader() : glShaderSource() successful
+2016-08-08 12:28:06:801[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 12:28:06:804[Info         ] ShaderProgram::CheckShaderCompileStatus(2) successful.
+2016-08-08 12:28:06:804[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 12:28:06:807[cInfo        ] ShaderInfo saved successfully.
+2016-08-08 12:28:06:811[cDebug       ] ShaderProgram::AddShader() : glAttachShader() successful
+2016-08-08 12:28:06:813[Info         ] ShaderProgram::AddShader [2] successful.
+2016-08-08 12:28:06:814[Debug        ] File [..\Data\shaders\debug.frag.shader] Opened successfully! Buffer Length:[104]
+2016-08-08 12:28:06:814[Debug        ] Shader file [..\Data\shaders\debug.frag.shader] contents:
+//BEGIN
+#version 430 core
+
+
+in  vec4 color;
+out vec4 outColor;
+
+void main()
+{
+	outColor = color;
+}
+
+
+//END
+
+2016-08-08 12:28:06:814[Debug        ]  ShaderProgram::AddShader() file with data was read in
+2016-08-08 12:28:06:814[Debug        ] ShaderProgram::AddShader() : glShaderSource() successful
+2016-08-08 12:28:06:814[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 12:28:06:816[Info         ] ShaderProgram::CheckShaderCompileStatus(3) successful.
+2016-08-08 12:28:06:816[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 12:28:06:818[cInfo        ] ShaderInfo saved successfully.
+2016-08-08 12:28:06:821[cDebug       ] ShaderProgram::AddShader() : glAttachShader() successful
+2016-08-08 12:28:06:823[Info         ] ShaderProgram::AddShader [3] successful.
+2016-08-08 12:28:06:825[cInfo        ] CheckProgramStatus() successful!
+2016-08-08 12:28:06:827[cInfo        ] CheckProgramStatus() successful!
+2016-08-08 12:28:06:828[cInfo        ] Shader Init started
+2016-08-08 12:28:06:829[cInfo        ] Shader Program created.
+2016-08-08 12:28:06:832[cProcess     ] ShaderProgram::Initialize()[4] successful!
+2016-08-08 12:28:06:833[Debug        ] File [..\Data\shaders\play.vert.shader] Opened successfully! Buffer Length:[343]
+2016-08-08 12:28:06:833[Debug        ] Shader file [..\Data\shaders\play.vert.shader] contents:
+//BEGIN
+#version 430 core
+
+layout (location = 0)  in vec3 vPosition;
+layout (location = 1)  in vec3 vColor;
+layout (location = 15) uniform vec3 colorin;
+layout (location = 16) uniform mat4 MAT;
+
+out vec4 color;
+
+void main()
+{
+	vec4 vertPos = vec4(vPosition, 1.0);
+	gl_Position = MAT *  vertPos;
+	color = vec4((vColor + colorin), 1.0);
+}
+//END
+
+2016-08-08 12:28:06:833[Debug        ]  ShaderProgram::AddShader() file with data was read in
+2016-08-08 12:28:06:833[Debug        ] ShaderProgram::AddShader() : glShaderSource() successful
+2016-08-08 12:28:06:833[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 12:28:06:835[Info         ] ShaderProgram::CheckShaderCompileStatus(5) successful.
+2016-08-08 12:28:06:836[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 12:28:06:838[cInfo        ] ShaderInfo saved successfully.
+2016-08-08 12:28:06:843[cDebug       ] ShaderProgram::AddShader() : glAttachShader() successful
+2016-08-08 12:28:06:846[Info         ] ShaderProgram::AddShader [5] successful.
+2016-08-08 12:28:06:846[Debug        ] File [..\Data\shaders\play.frag.shader] Opened successfully! Buffer Length:[391]
+2016-08-08 12:28:06:846[Debug        ] Shader file [..\Data\shaders\play.frag.shader] contents:
+//BEGIN
+#version 430 core
+
+
+in  vec4 color;
+out vec4 outColor;
+
+void main()
+{
+
+	//if (color.r < .7) discard;
+	outColor = color;
+
+	//if(((gl_FragCoord.x  > 600)&& (gl_FragCoord.y < 300)) || ((gl_FragCoord.y < 300)  && (gl_FragCoord.x  < 600) )) {
+	//discard;
+	//}
+
+	//vec2 scrPos = vec2(gl_FragCoord) - vec2(350,150);
+	//float len =  length(scrPos);
+	//if(len < 50 )discard;
+}
+
+
+//END
+
+2016-08-08 12:28:06:846[Debug        ]  ShaderProgram::AddShader() file with data was read in
+2016-08-08 12:28:06:846[Debug        ] ShaderProgram::AddShader() : glShaderSource() successful
+2016-08-08 12:28:06:846[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 12:28:06:848[Info         ] ShaderProgram::CheckShaderCompileStatus(6) successful.
+2016-08-08 12:28:06:848[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 12:28:06:850[cInfo        ] ShaderInfo saved successfully.
+2016-08-08 12:28:06:851[cDebug       ] ShaderProgram::AddShader() : glAttachShader() successful
+2016-08-08 12:28:06:855[Info         ] ShaderProgram::AddShader [6] successful.
+2016-08-08 12:28:06:857[cInfo        ] CheckProgramStatus() successful!
+2016-08-08 12:28:06:859[cInfo        ] CheckProgramStatus() successful!
+2016-08-08 12:28:06:860[cInfo        ] Shader Init started
+2016-08-08 12:28:06:862[cInfo        ] Shader Program created.
+2016-08-08 12:28:06:863[cProcess     ] ShaderProgram::Initialize()[7] successful!
+2016-08-08 12:28:06:865[Debug        ] File [..\Data\shaders\texture.vert.shader] Opened successfully! Buffer Length:[305]
+2016-08-08 12:28:06:865[Debug        ] Shader file [..\Data\shaders\texture.vert.shader] contents:
+//BEGIN
+#version 430 core
+
+layout (location = 0)  in vec3 vPosition;
+layout (location = 1)  in vec2 vUV;
+
+layout (location = 16) uniform mat4 MAT;
+
+//out data
+out vec2 UV;
+
+//out vec4 color;
+
+void main()
+{
+	vec4 vertPos = vec4(vPosition, 1.0);
+	gl_Position = MAT *  vertPos;
+
+	UV = vUV;
+	
+	
+}
+//END
+
+2016-08-08 12:28:06:865[Debug        ]  ShaderProgram::AddShader() file with data was read in
+2016-08-08 12:28:06:865[Debug        ] ShaderProgram::AddShader() : glShaderSource() successful
+2016-08-08 12:28:06:865[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 12:28:06:867[Info         ] ShaderProgram::CheckShaderCompileStatus(8) successful.
+2016-08-08 12:28:06:867[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 12:28:06:870[cInfo        ] ShaderInfo saved successfully.
+2016-08-08 12:28:06:871[cDebug       ] ShaderProgram::AddShader() : glAttachShader() successful
+2016-08-08 12:28:06:879[Info         ] ShaderProgram::AddShader [8] successful.
+2016-08-08 12:28:06:879[Debug        ] File [..\Data\shaders\texture.frag.shader] Opened successfully! Buffer Length:[484]
+2016-08-08 12:28:06:879[Debug        ] Shader file [..\Data\shaders\texture.frag.shader] contents:
+//BEGIN
+#version 430 core
+
+
+in  vec2 UV;
+out vec4 outColor;
+
+layout(location = 20) uniform sampler2D textureSampler;
+
+void main()
+{
+
+	//if (color.r < .7) discard;
+	outColor = vec4(texture(textureSampler, UV).rgb, 1.0);
+
+	//if(((gl_FragCoord.x  > 600)&& (gl_FragCoord.y < 300)) || ((gl_FragCoord.y < 300)  && (gl_FragCoord.x  < 600) )) {
+	//discard;
+	//}
+
+	//vec2 scrPos = vec2(gl_FragCoord) - vec2(350,150);
+	//float len =  length(scrPos);
+	//if(len < 50 )discard;
+}
+
+
+//END
+
+2016-08-08 12:28:06:879[Debug        ]  ShaderProgram::AddShader() file with data was read in
+2016-08-08 12:28:06:879[Debug        ] ShaderProgram::AddShader() : glShaderSource() successful
+2016-08-08 12:28:06:880[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 12:28:06:882[Info         ] ShaderProgram::CheckShaderCompileStatus(9) successful.
+2016-08-08 12:28:06:882[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 12:28:06:884[cInfo        ] ShaderInfo saved successfully.
+2016-08-08 12:28:06:885[cDebug       ] ShaderProgram::AddShader() : glAttachShader() successful
+2016-08-08 12:28:06:895[Info         ] ShaderProgram::AddShader [9] successful.
+2016-08-08 12:28:06:896[cInfo        ] CheckProgramStatus() successful!
+2016-08-08 12:28:06:898[cInfo        ] CheckProgramStatus() successful!
+2016-08-08 12:28:06:899[cInfo        ] Shader Init started
+2016-08-08 12:28:06:901[cInfo        ] Shader Program created.
+2016-08-08 12:28:06:903[cProcess     ] ShaderProgram::Initialize()[10] successful!
+2016-08-08 12:28:06:906[Debug        ] File [..\Data\shaders\framebuffer.vert.shader] Opened successfully! Buffer Length:[305]
+2016-08-08 12:28:06:906[Debug        ] Shader file [..\Data\shaders\framebuffer.vert.shader] contents:
+//BEGIN
+#version 430 core
+
+layout (location = 0)  in vec3 vPosition;
+layout (location = 1)  in vec2 vUV;
+
+layout (location = 16) uniform mat4 MAT;
+
+//out data
+out vec2 UV;
+
+//out vec4 color;
+
+void main()
+{
+	vec4 vertPos = vec4(vPosition, 1.0);
+	gl_Position = MAT *  vertPos;
+
+	UV = vUV;
+	
+	
+}
+//END
+
+2016-08-08 12:28:06:906[Debug        ]  ShaderProgram::AddShader() file with data was read in
+2016-08-08 12:28:06:906[Debug        ] ShaderProgram::AddShader() : glShaderSource() successful
+2016-08-08 12:28:06:906[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 12:28:06:911[Info         ] ShaderProgram::CheckShaderCompileStatus(11) successful.
+2016-08-08 12:28:06:911[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 12:28:06:913[cInfo        ] ShaderInfo saved successfully.
+2016-08-08 12:28:06:914[cDebug       ] ShaderProgram::AddShader() : glAttachShader() successful
+2016-08-08 12:28:06:918[Info         ] ShaderProgram::AddShader [11] successful.
+2016-08-08 12:28:06:918[Debug        ] File [..\Data\shaders\framebuffer.frag.shader] Opened successfully! Buffer Length:[597]
+2016-08-08 12:28:06:918[Debug        ] Shader file [..\Data\shaders\framebuffer.frag.shader] contents:
+//BEGIN
+#version 430 core
+
+
+in  vec2 UV;
+out vec4 outColor;
+
+layout(location = 20) uniform sampler2D textureSampler;
+
+void main()
+{
+
+	//if (color.r < .7) discard;
+	vec3 tempCol = texture(textureSampler, UV).rgb;
+	if (tempCol == vec3(0, 0, 0)) discard;
+	outColor = vec4(tempCol.r / 2.0f, tempCol.g / 2.0f, tempCol.b / 2.0f, 1.0f);
+
+	//if(((gl_FragCoord.x  > 600)&& (gl_FragCoord.y < 300)) || ((gl_FragCoord.y < 300)  && (gl_FragCoord.x  < 600) )) {
+	//discard;
+	//}
+
+	//vec2 scrPos = vec2(gl_FragCoord) - vec2(350,150);
+	//float len =  length(scrPos);
+	//if(len < 50 )discard;
+}
+
+
+//END
+
+2016-08-08 12:28:06:918[Debug        ]  ShaderProgram::AddShader() file with data was read in
+2016-08-08 12:28:06:918[Debug        ] ShaderProgram::AddShader() : glShaderSource() successful
+2016-08-08 12:28:06:919[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 12:28:06:922[Info         ] ShaderProgram::CheckShaderCompileStatus(12) successful.
+2016-08-08 12:28:06:922[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 12:28:06:927[cInfo        ] ShaderInfo saved successfully.
+2016-08-08 12:28:06:929[cDebug       ] ShaderProgram::AddShader() : glAttachShader() successful
+2016-08-08 12:28:06:932[Info         ] ShaderProgram::AddShader [12] successful.
+2016-08-08 12:28:06:934[cInfo        ] CheckProgramStatus() successful!
+2016-08-08 12:28:06:936[cInfo        ] CheckProgramStatus() successful!
+2016-08-08 12:28:06:938[cInfo        ] Shader Init started
+2016-08-08 12:28:06:943[cInfo        ] Shader Program created.
+2016-08-08 12:28:06:944[cProcess     ] ShaderProgram::Initialize()[13] successful!
+2016-08-08 12:28:06:946[Debug        ] File [..\Data\shaders\lighting.vert.shader] Opened successfully! Buffer Length:[777]
+2016-08-08 12:28:06:946[Debug        ] Shader file [..\Data\shaders\lighting.vert.shader] contents:
+//BEGIN
+#version 430 core
+
+layout (location = 0)  in vec3 vPosition;
+layout (location = 1)  in vec3 vNorm;
+layout (location = 15) uniform vec3 tint;
+layout (location = 16) uniform mat4 MAT;
+
+layout(location = 22) uniform vec3 lPos;
+//NORMALIZE!!!!
+layout(location = 23) uniform vec3 lVec;
+//out data
+out vec3 normal;
+out vec3 color;
+
+//out vec4 color;
+
+void main()
+{
+	vec4 vertPos = vec4(vPosition, 1.0);
+	vec4 matPos = MAT *  vertPos;
+	gl_Position = matPos;
+
+	vec3 matPos3 = vec3(matPos.x, matPos.y, matPos.z);
+
+	float dist = length((lPos - matPos3));
+	//lightPos;
+	//DOT
+	float light = (((lVec.r*vNorm.x) + (lVec.g*vNorm.y) + (lVec.r*vNorm.z))) * -1.0f * (dist);
+
+	color = vec3(tint.r * light, tint.g * light, tint.b * light);
+	normal = vNorm;
+	
+	
+}
+//END
+
+2016-08-08 12:28:06:946[Debug        ]  ShaderProgram::AddShader() file with data was read in
+2016-08-08 12:28:06:946[Debug        ] ShaderProgram::AddShader() : glShaderSource() successful
+2016-08-08 12:28:06:946[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 12:28:06:949[Info         ] ShaderProgram::CheckShaderCompileStatus(14) successful.
+2016-08-08 12:28:06:949[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 12:28:06:951[cInfo        ] ShaderInfo saved successfully.
+2016-08-08 12:28:06:954[cDebug       ] ShaderProgram::AddShader() : glAttachShader() successful
+2016-08-08 12:28:06:957[Info         ] ShaderProgram::AddShader [14] successful.
+2016-08-08 12:28:06:957[Debug        ] File [..\Data\shaders\lighting.frag.shader] Opened successfully! Buffer Length:[524]
+2016-08-08 12:28:06:957[Debug        ] Shader file [..\Data\shaders\lighting.frag.shader] contents:
+//BEGIN
+#version 430 core
+
+
+in  vec3 normal;
+in  vec3 color;
+out vec4 outColor;
+
+//layout(location = 20) uniform sampler2D textureSampler;
+
+void main()
+{
+
+	//if (color.r < .7) discard;
+	outColor = vec4(color, 1.0f);//vec4(normal.x, normal.y, normal.z, 1.0);
+
+	//if(((gl_FragCoord.x  > 600)&& (gl_FragCoord.y < 300)) || ((gl_FragCoord.y < 300)  && (gl_FragCoord.x  < 600) )) {
+	//discard;
+	//}
+
+	//vec2 scrPos = vec2(gl_FragCoord) - vec2(350,150);
+	//float len =  length(scrPos);
+	//if(len < 50 )discard;
+}
+
+
+//END
+
+2016-08-08 12:28:06:957[Debug        ]  ShaderProgram::AddShader() file with data was read in
+2016-08-08 12:28:06:957[Debug        ] ShaderProgram::AddShader() : glShaderSource() successful
+2016-08-08 12:28:06:957[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 12:28:06:959[Info         ] ShaderProgram::CheckShaderCompileStatus(15) successful.
+2016-08-08 12:28:06:959[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 12:28:06:961[cInfo        ] ShaderInfo saved successfully.
+2016-08-08 12:28:06:963[cDebug       ] ShaderProgram::AddShader() : glAttachShader() successful
+2016-08-08 12:28:06:966[Info         ] ShaderProgram::AddShader [15] successful.
+2016-08-08 12:28:06:968[cInfo        ] CheckProgramStatus() successful!
+2016-08-08 12:28:06:970[cInfo        ] CheckProgramStatus() successful!
+2016-08-08 12:28:06:972[cProcess     ] BufferManager::Initialize() successful.
+2016-08-08 12:28:06:973[Info         ] GetAttribLocation [vPosition] successful.
+2016-08-08 12:28:06:973[Info         ] GetUniformLocation [colorin] successful.
+2016-08-08 12:28:06:973[Info         ] GetUniformLocation [MAT] successful.
+2016-08-08 12:28:06:973[cProcess     ] RenderEngine::Initialize() successful.
+2016-08-08 12:28:06:975[cProcess     ] BufferManager::Initialize() successful.
+2016-08-08 12:28:06:976[cInfo        ] 
+-----------------------------------------------------------------------
+ BufferInfo::CreateBuffers()[1] Created buffers:| VERTEX [1] with [1000000] bytes. || INDEX [2] with [1000000] bytes |
+-----------------------------------------------------------------------
+
+2016-08-08 12:28:06:990[cInfo        ] --------BufferInfo::AddMesh() Added mesh successfully-------
+2016-08-08 12:28:06:993[cInfo        ] 
+2016-08-08 12:28:06:994[cInfo        ] --------------------| START BUFFER MESH INFO |-------------------------------------
+2016-08-08 12:28:06:999[cInfo        ] BufferInfo::AddMesh(): NUM VERTS-----------------[4]
+2016-08-08 12:28:07:001[cInfo        ] BufferInfo::AddMesh(): NUM INDICES---------------[6]
+2016-08-08 12:28:07:005[cInfo        ] BufferInfo::AddMesh(): VERT OFFSET---------------[0]
+2016-08-08 12:28:07:007[cInfo        ] BufferInfo::AddMesh(): INDICES OFFSET (BYTES)----[0]
+2016-08-08 12:28:07:009[cInfo        ] --------------------|  END BUFFER MESH INFO  |--------------------------------------
+2016-08-08 12:28:07:011[cInfo        ] 
+
+2016-08-08 12:28:07:014[cProcess     ] BufferManager::Initialize() successful.
+2016-08-08 12:28:07:016[cInfo        ] 
+-----------------------------------------------------------------------
+ BufferInfo::CreateBuffers()[2] Created buffers:| VERTEX [3] with [1000000] bytes. || INDEX [4] with [1000000] bytes |
+-----------------------------------------------------------------------
+
+2016-08-08 12:28:07:026[cInfo        ] --------BufferInfo::AddMesh() Added mesh successfully-------
+2016-08-08 12:28:07:031[cInfo        ] 
+2016-08-08 12:28:07:031[cInfo        ] --------------------| START BUFFER MESH INFO |-------------------------------------
+2016-08-08 12:28:07:037[cInfo        ] BufferInfo::AddMesh(): NUM VERTS-----------------[8]
+2016-08-08 12:28:07:039[cInfo        ] BufferInfo::AddMesh(): NUM INDICES---------------[24]
+2016-08-08 12:28:07:041[cInfo        ] BufferInfo::AddMesh(): VERT OFFSET---------------[0]
+2016-08-08 12:28:07:043[cInfo        ] BufferInfo::AddMesh(): INDICES OFFSET (BYTES)----[0]
+2016-08-08 12:28:07:045[cInfo        ] --------------------|  END BUFFER MESH INFO  |--------------------------------------
+2016-08-08 12:28:07:049[cInfo        ] 
+
+2016-08-08 12:28:07:053[cProcess     ] BufferManager::Initialize() successful.
+2016-08-08 12:28:07:056[cInfo        ] 
+-----------------------------------------------------------------------
+ BufferInfo::CreateBuffers()[3] Created buffers:| VERTEX [5] with [1000000] bytes. || INDEX [6] with [1000000] bytes |
+-----------------------------------------------------------------------
+
+2016-08-08 12:28:07:070[cInfo        ] --------BufferInfo::AddMesh() Added mesh successfully-------
+2016-08-08 12:28:07:073[cInfo        ] 
+2016-08-08 12:28:07:073[cInfo        ] --------------------| START BUFFER MESH INFO |-------------------------------------
+2016-08-08 12:28:07:079[cInfo        ] BufferInfo::AddMesh(): NUM VERTS-----------------[36]
+2016-08-08 12:28:07:081[cInfo        ] BufferInfo::AddMesh(): NUM INDICES---------------[0]
+2016-08-08 12:28:07:083[cInfo        ] BufferInfo::AddMesh(): VERT OFFSET---------------[0]
+2016-08-08 12:28:07:084[cInfo        ] BufferInfo::AddMesh(): INDICES OFFSET (BYTES)----[0]
+2016-08-08 12:28:07:088[cInfo        ] --------------------|  END BUFFER MESH INFO  |--------------------------------------
+2016-08-08 12:28:07:091[cInfo        ] 
+
+2016-08-08 12:28:07:094[cInfo        ] --------BufferInfo::AddMesh() Added mesh successfully-------
+2016-08-08 12:28:07:096[cInfo        ] 
+2016-08-08 12:28:07:097[cInfo        ] --------------------| START BUFFER MESH INFO |-------------------------------------
+2016-08-08 12:28:07:103[cInfo        ] BufferInfo::AddMesh(): NUM VERTS-----------------[24]
+2016-08-08 12:28:07:105[cInfo        ] BufferInfo::AddMesh(): NUM INDICES---------------[36]
+2016-08-08 12:28:07:107[cInfo        ] BufferInfo::AddMesh(): VERT OFFSET---------------[36]
+2016-08-08 12:28:07:109[cInfo        ] BufferInfo::AddMesh(): INDICES OFFSET (BYTES)----[0]
+2016-08-08 12:28:07:110[cInfo        ] --------------------|  END BUFFER MESH INFO  |--------------------------------------
+2016-08-08 12:28:07:113[cInfo        ] 
+
+2016-08-08 12:28:07:122[cInfo        ] --------BufferInfo::AddMesh() Added mesh successfully-------
+2016-08-08 12:28:07:126[cInfo        ] 
+2016-08-08 12:28:07:127[cInfo        ] --------------------| START BUFFER MESH INFO |-------------------------------------
+2016-08-08 12:28:07:132[cInfo        ] BufferInfo::AddMesh(): NUM VERTS-----------------[1536]
+2016-08-08 12:28:07:134[cInfo        ] BufferInfo::AddMesh(): NUM INDICES---------------[3072]
+2016-08-08 12:28:07:136[cInfo        ] BufferInfo::AddMesh(): VERT OFFSET---------------[8]
+2016-08-08 12:28:07:138[cInfo        ] BufferInfo::AddMesh(): INDICES OFFSET (BYTES)----[48]
+2016-08-08 12:28:07:140[cInfo        ] --------------------|  END BUFFER MESH INFO  |--------------------------------------
+2016-08-08 12:28:07:143[cInfo        ] 
+
+2016-08-08 12:28:07:147[cProcess     ] BufferManager::Initialize() successful.
+2016-08-08 12:28:07:150[cInfo        ] 
+-----------------------------------------------------------------------
+ BufferInfo::CreateBuffers()[4] Created buffers:| VERTEX [7] with [1000000] bytes. || INDEX [8] with [1000000] bytes |
+-----------------------------------------------------------------------
+
+2016-08-08 12:28:07:160[cInfo        ] --------BufferInfo::AddMesh() Added mesh successfully-------
+2016-08-08 12:28:07:165[cInfo        ] 
+2016-08-08 12:28:07:166[cInfo        ] --------------------| START BUFFER MESH INFO |-------------------------------------
+2016-08-08 12:28:07:172[cInfo        ] BufferInfo::AddMesh(): NUM VERTS-----------------[164]
+2016-08-08 12:28:07:174[cInfo        ] BufferInfo::AddMesh(): NUM INDICES---------------[0]
+2016-08-08 12:28:07:176[cInfo        ] BufferInfo::AddMesh(): VERT OFFSET---------------[0]
+2016-08-08 12:28:07:177[cInfo        ] BufferInfo::AddMesh(): INDICES OFFSET (BYTES)----[0]
+2016-08-08 12:28:07:179[cInfo        ] --------------------|  END BUFFER MESH INFO  |--------------------------------------
+2016-08-08 12:28:07:182[cInfo        ] 
+
+2016-08-08 12:28:07:185[cProcess     ] ShapeGenerator initialized successfully.
+2016-08-08 12:28:07:187[cProcess     ] Camera::Initialize() successful.
+2016-08-08 12:28:07:188[cProcess     ] Keyboard::Initialize() successful
+2016-08-08 12:28:07:190[cProcess     ] Camera::Initialize() successful.
+2016-08-08 12:28:07:191[cInfo        ] BufferInfo [1] failed to add gob. Check if gob matches?
+2016-08-08 12:28:07:193[cInfo        ] BufferInfo [2] failed to add gob. Check if gob matches?
+2016-08-08 12:28:07:194[cInfo        ] BufferInfo [1] failed to add gob. Check if gob matches?
+2016-08-08 12:28:07:196[cInfo        ] BufferInfo [1] failed to add gob. Check if gob matches?
+2016-08-08 12:28:07:198[cInfo        ] BufferInfo [1] failed to add gob. Check if gob matches?
+2016-08-08 12:28:07:200[cInfo        ] BufferInfo [2] failed to add gob. Check if gob matches?
+2016-08-08 12:28:07:201[cInfo        ] BufferInfo [1] failed to add gob. Check if gob matches?
+2016-08-08 12:28:07:203[cInfo        ] BufferInfo [1] failed to add gob. Check if gob matches?
+2016-08-08 12:28:07:205[cInfo        ] BufferInfo [1] failed to add gob. Check if gob matches?
+2016-08-08 12:28:07:207[cInfo        ] BufferInfo [2] failed to add gob. Check if gob matches?
+2016-08-08 12:28:07:209[cInfo        ] BufferInfo [3] failed to add gob. Check if gob matches?
+2016-08-08 12:28:07:211[cProcess     ] BufferManager::Initialize() successful.
+2016-08-08 12:28:07:214[cInfo        ] 
+-----------------------------------------------------------------------
+ BufferInfo::CreateBuffers()[5] Created buffers:| VERTEX [9] with [1000000] bytes. || INDEX [10] with [1000000] bytes |
+-----------------------------------------------------------------------
+
+2016-08-08 12:28:07:225[cInfo        ] --------BufferInfo::AddMesh() Added mesh successfully-------
+2016-08-08 12:28:07:230[cInfo        ] 
+2016-08-08 12:28:07:230[cInfo        ] --------------------| START BUFFER MESH INFO |-------------------------------------
+2016-08-08 12:28:07:235[cInfo        ] BufferInfo::AddMesh(): NUM VERTS-----------------[1374]
+2016-08-08 12:28:07:237[cInfo        ] BufferInfo::AddMesh(): NUM INDICES---------------[0]
+2016-08-08 12:28:07:239[cInfo        ] BufferInfo::AddMesh(): VERT OFFSET---------------[0]
+2016-08-08 12:28:07:241[cInfo        ] BufferInfo::AddMesh(): INDICES OFFSET (BYTES)----[0]
+2016-08-08 12:28:07:242[cInfo        ] --------------------|  END BUFFER MESH INFO  |--------------------------------------
+2016-08-08 12:28:07:245[cInfo        ] 
+
+2016-08-08 12:28:07:249[Info         ] ShapeGenerator::ReadSceneFile(): Added new scene [..\Data\Scenes\Chicken.pn.scene] successfully.
+2016-08-08 12:28:07:249[cInfo        ] BufferInfo [1] failed to add gob. Check if gob matches?
+2016-08-08 12:28:07:253[cInfo        ] BufferInfo [2] failed to add gob. Check if gob matches?
+2016-08-08 12:28:07:255[cInfo        ] BufferInfo [3] failed to add gob. Check if gob matches?
+2016-08-08 12:28:07:257[cInfo        ] BufferInfo [4] failed to add gob. Check if gob matches?
+2016-08-08 12:28:07:266[cProcess     ] BufferManager::Initialize() successful.
+2016-08-08 12:28:07:270[cInfo        ] 
+-----------------------------------------------------------------------
+ BufferInfo::CreateBuffers()[6] Created buffers:| VERTEX [11] with [6756480] bytes. || INDEX [12] with [0] bytes |
+-----------------------------------------------------------------------
+
+2016-08-08 12:28:07:286[cInfo        ] --------BufferInfo::AddMesh() Added mesh successfully-------
+2016-08-08 12:28:07:288[cInfo        ] 
+2016-08-08 12:28:07:289[cInfo        ] --------------------| START BUFFER MESH INFO |-------------------------------------
+2016-08-08 12:28:07:294[cInfo        ] BufferInfo::AddMesh(): NUM VERTS-----------------[337824]
+2016-08-08 12:28:07:295[cInfo        ] BufferInfo::AddMesh(): NUM INDICES---------------[0]
+2016-08-08 12:28:07:297[cInfo        ] BufferInfo::AddMesh(): VERT OFFSET---------------[0]
+2016-08-08 12:28:07:299[cInfo        ] BufferInfo::AddMesh(): INDICES OFFSET (BYTES)----[0]
+2016-08-08 12:28:07:301[cInfo        ] --------------------|  END BUFFER MESH INFO  |--------------------------------------
+2016-08-08 12:28:07:303[cInfo        ] 
+
+2016-08-08 12:28:07:334[Info         ] ShapeGenerator::ReadSceneFile(): Added new scene [..\Data\Scenes\Dargon.pt.scene] successfully.
+2016-08-08 12:28:07:334[cInfo        ] BufferInfo [1] failed to add gob. Check if gob matches?
+2016-08-08 12:28:07:342[cInfo        ] BufferInfo [2] failed to add gob. Check if gob matches?
+2016-08-08 12:28:07:344[cInfo        ] BufferInfo [3] failed to add gob. Check if gob matches?
+2016-08-08 12:28:07:346[cInfo        ] BufferInfo [4] failed to add gob. Check if gob matches?
+2016-08-08 12:28:07:347[cInfo        ] BufferInfo [5] failed to add gob. Check if gob matches?
+2016-08-08 12:28:07:349[cProcess     ] BodaciousQuest::Initialize() successful.
+2016-08-08 12:28:07:351[Process      ] GameTime::Initialize() ok
+
+2016-08-08 12:28:07:351[cProcess     ] MyWindow::Initialize() successful!
+2016-08-08 12:28:07:375[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:375[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:378[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:378[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:379[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:379[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:381[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:381[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:382[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:382[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:384[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:384[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:385[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:385[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:387[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:387[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:388[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:388[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:390[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:390[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:390[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:390[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:392[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:392[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:393[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:393[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:395[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:395[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:395[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:395[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:398[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:398[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:398[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:398[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:400[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:400[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:401[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:401[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:403[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:403[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:404[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:404[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:406[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:406[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:407[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:407[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:409[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:409[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:410[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:410[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:412[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:412[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:412[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:412[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:415[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:415[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:415[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:415[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:417[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:417[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:418[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:418[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:421[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:421[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:421[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:421[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:424[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:424[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:424[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:424[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:426[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:426[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:427[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:427[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:429[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:429[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:429[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:430[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:432[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:432[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:432[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:432[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:434[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:434[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:435[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:435[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:438[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:438[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:438[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:438[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:441[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:441[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:441[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:441[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:443[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:444[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:444[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:444[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:446[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:446[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:447[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:447[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:449[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:449[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:449[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:449[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:451[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:451[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:452[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:452[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:454[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:454[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:455[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:455[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:457[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:457[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:458[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:458[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:460[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:460[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:461[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:461[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:463[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:463[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:463[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:463[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:466[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:466[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:466[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:466[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:469[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:469[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:469[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:469[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:472[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:472[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:473[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:473[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:475[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:475[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:475[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:475[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:478[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:478[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:478[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:478[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:480[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:480[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:481[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:481[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:483[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:483[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:483[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:483[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:486[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:486[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:487[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:487[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:489[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:489[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:489[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:489[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:491[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:491[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:492[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:492[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:494[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:494[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:494[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:494[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:497[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:497[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:497[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:497[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:499[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:499[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:500[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:500[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:502[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:502[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:503[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:503[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:505[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:505[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:506[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:506[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:508[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:508[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:508[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:508[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:511[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:511[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:511[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:511[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:513[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:513[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:514[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:514[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:516[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:516[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:517[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:517[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:519[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:519[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:520[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:520[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:522[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:522[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:523[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:523[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:525[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:525[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:526[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:526[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:528[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:528[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:528[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:528[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:531[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:531[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:531[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:531[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:534[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:534[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:534[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:534[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:537[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:537[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:537[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:537[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:540[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:540[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:540[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:540[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:542[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:542[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:543[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:543[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:545[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:545[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:546[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:546[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:548[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:548[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:549[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:549[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:551[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:551[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:552[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:552[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:554[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:554[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:555[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:555[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:557[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:557[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:557[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:557[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:560[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:560[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:560[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:560[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:562[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:562[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:563[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:563[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:565[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:565[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:566[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:566[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:568[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:568[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:569[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:569[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:571[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:571[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:572[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:572[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:574[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:574[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:574[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:574[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:577[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:577[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:577[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:577[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:579[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:579[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:580[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:580[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:582[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:582[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:583[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:583[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:585[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:585[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:586[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:586[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:588[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:588[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:589[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:589[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:591[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:591[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:592[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:592[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:594[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:594[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:594[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:594[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:597[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:597[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:598[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:598[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:601[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:601[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:602[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:602[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:604[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:604[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:605[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:605[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:607[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:607[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:608[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:608[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:610[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:610[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:610[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:610[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:613[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:613[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:613[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:613[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:615[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:615[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:616[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:616[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:618[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:618[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:618[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:618[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:621[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:621[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:622[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:622[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:623[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:623[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:624[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:624[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:626[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:626[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:628[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:628[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:630[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:630[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:631[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:631[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:633[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:633[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:634[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:634[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:636[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:636[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:636[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:636[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:639[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:639[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:639[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:639[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:641[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:641[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:642[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:642[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:644[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:644[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:645[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:645[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:647[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:647[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:647[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:647[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:650[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:650[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:650[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:650[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:652[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:653[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:653[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:653[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:655[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:655[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:656[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:656[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:658[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:658[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:659[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:659[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:660[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:661[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:661[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:661[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:663[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:663[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:663[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:663[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:665[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:666[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:666[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:666[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:668[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:668[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:669[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:669[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:671[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:671[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:671[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:671[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:674[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:674[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:674[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:674[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:676[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:676[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:677[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:677[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:679[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:679[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:680[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:680[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:682[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:682[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:682[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:682[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:685[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:685[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:686[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:686[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:688[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:688[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:688[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:688[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:690[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:690[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:691[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:691[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:693[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:693[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:693[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:693[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:696[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:696[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:696[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:696[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:698[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:698[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:699[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:699[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:701[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:701[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:702[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:702[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:704[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:704[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:705[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:705[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:707[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:707[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:708[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:708[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:710[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:710[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:710[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:711[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:713[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:713[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:713[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:713[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:715[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:715[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:716[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:716[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:719[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:719[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:719[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:719[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:722[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:722[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:722[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:722[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:724[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:725[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:725[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:725[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:727[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:727[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:728[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:728[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:730[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:730[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:731[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:731[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:733[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:733[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:734[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:734[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:737[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:737[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:738[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:738[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:740[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:740[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:741[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:741[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:744[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:744[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:745[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:745[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:747[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:747[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:748[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:748[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:751[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:751[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:752[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:752[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:758[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:758[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:759[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:759[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:761[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:761[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:762[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:762[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:764[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:764[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:765[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:765[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:767[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:767[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:768[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:768[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:773[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:773[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:773[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:774[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:776[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:776[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:776[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:776[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:779[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:779[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:780[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:780[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:782[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:782[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:782[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:782[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:785[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:785[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:786[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:786[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:789[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:789[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:790[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:790[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:792[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:792[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:793[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:793[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:795[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:795[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:796[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:796[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:798[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:798[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:798[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:798[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:801[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:801[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:801[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:801[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:804[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:804[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:804[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:804[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:806[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:807[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:807[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:807[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:809[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:809[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:810[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:810[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:812[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:812[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:812[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:812[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:814[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:814[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:815[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:815[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:817[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:817[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:818[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:818[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:820[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:820[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:821[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:821[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:823[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:823[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:824[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:824[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:826[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:826[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:826[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:826[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:828[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:828[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:829[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:829[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:831[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:831[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:832[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:832[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:834[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:834[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:834[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:834[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:837[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:837[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:838[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:838[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:840[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:840[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:840[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:840[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:843[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:843[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:843[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:843[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:845[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:845[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:846[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:846[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:848[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:848[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:849[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:849[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:851[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:852[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:852[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:852[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:855[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:855[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:855[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:855[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:857[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:857[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:858[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:858[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:860[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:860[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:860[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:860[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:863[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:863[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:864[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:864[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:866[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:866[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:866[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:866[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:868[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:869[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:869[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:869[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:871[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:871[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:872[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:872[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:874[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:874[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:874[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:874[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:877[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:877[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:877[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:877[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:879[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:880[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:880[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:880[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:882[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:882[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:883[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:883[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:885[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:885[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:886[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:886[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:888[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:888[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:889[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:889[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:891[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:891[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:892[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:892[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:894[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:894[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:895[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:895[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:897[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:897[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:897[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:897[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:899[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:899[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:900[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:900[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:902[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:902[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:903[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:903[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:905[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:905[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:906[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:906[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:908[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:908[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:909[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:909[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:911[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:911[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:911[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:911[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:914[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:914[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:914[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:914[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:916[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:917[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:917[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:917[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:920[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:920[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:920[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:920[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:922[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:922[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:923[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:923[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:925[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:925[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:926[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:926[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:928[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:928[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:929[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:929[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:931[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:931[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:932[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:932[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:934[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:934[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:934[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:934[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:937[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:937[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:938[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:938[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:940[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:940[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:941[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:941[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:943[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:943[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:943[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:943[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:945[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:945[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:946[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:946[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:948[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:948[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:949[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:949[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:951[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:951[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:951[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:951[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:954[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:954[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:954[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:954[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:957[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:957[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:958[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:958[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:960[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:960[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:960[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:960[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:963[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:963[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:963[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:963[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:965[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:965[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:966[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:966[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:968[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:968[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:969[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:969[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:971[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:971[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:972[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:972[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:974[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:974[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:975[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:975[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:977[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:977[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:977[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:977[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:980[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:980[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:980[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:980[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:982[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:982[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:983[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:983[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:986[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:986[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:986[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:986[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:989[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:989[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:989[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:989[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:991[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:991[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:992[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:992[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:994[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:994[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:995[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:995[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:997[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:997[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:07:998[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:07:998[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:000[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:000[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:000[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:000[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:003[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:003[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:004[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:004[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:006[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:006[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:006[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:007[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:009[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:009[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:009[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:009[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:012[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:012[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:012[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:012[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:015[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:015[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:015[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:015[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:018[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:018[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:018[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:018[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:021[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:021[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:022[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:022[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:024[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:024[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:024[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:024[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:027[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:027[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:027[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:027[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:029[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:029[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:030[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:030[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:032[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:032[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:033[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:033[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:035[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:035[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:036[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:036[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:038[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:038[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:039[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:039[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:041[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:041[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:042[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:042[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:044[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:044[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:045[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:045[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:047[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:047[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:048[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:048[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:050[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:050[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:051[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:051[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:053[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:053[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:054[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:054[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:056[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:056[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:057[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:057[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:059[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:059[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:059[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:059[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:061[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:061[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:062[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:062[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:064[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:064[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:065[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:065[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:067[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:067[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:068[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:068[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:070[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:070[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:071[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:071[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:073[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:073[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:074[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:074[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:076[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:076[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:076[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:076[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:079[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:079[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:079[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:079[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:081[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:081[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:082[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:082[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:084[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:084[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:085[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:085[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:087[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:087[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:088[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:088[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:090[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:090[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:091[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:091[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:093[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:093[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:094[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:094[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:096[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:096[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:097[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:097[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:099[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:099[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:099[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:099[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:102[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:102[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:103[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:103[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:105[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:105[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:105[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:106[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:108[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:108[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:108[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:108[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:110[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:110[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:111[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:111[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:114[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:114[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:115[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:115[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:117[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:117[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:117[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:117[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:120[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:120[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:121[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:121[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:123[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:123[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:123[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:123[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:125[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:125[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:126[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:126[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:128[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:128[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:129[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:129[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:131[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:131[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:131[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:131[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:134[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:134[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:134[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:134[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:137[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:137[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:138[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:138[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:140[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:140[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:140[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:140[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:143[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:143[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:144[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:144[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:146[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:146[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:148[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:148[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:150[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:150[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:151[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:151[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:153[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:153[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:154[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:154[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:157[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:157[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:157[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:157[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:160[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:160[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:161[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:161[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:163[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:163[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:163[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:163[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:166[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:166[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:166[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:166[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:169[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:169[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:169[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:169[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:172[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:172[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:172[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:172[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:174[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:174[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:175[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:175[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:177[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:177[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:178[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:178[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:180[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:180[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:180[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:180[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:182[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:182[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:183[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:183[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:186[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:186[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:186[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:186[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:188[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:188[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:189[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:189[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:192[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:192[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:192[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:192[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:194[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:194[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:195[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:195[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:197[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:197[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:198[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:198[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:200[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:200[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:200[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:200[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:203[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:203[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:203[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:203[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:206[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:206[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:207[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:207[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:209[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:209[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:210[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:210[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:212[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:212[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:213[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:213[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:216[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:216[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:216[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:216[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:219[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:219[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:220[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:220[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:222[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:222[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:223[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:223[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:225[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:225[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:225[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:225[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:227[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:227[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:228[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:228[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:230[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:230[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:231[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:231[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:233[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:233[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:233[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:233[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:236[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:236[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:237[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:237[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:239[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:239[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:239[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:239[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:241[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:241[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:242[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:242[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:244[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:244[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:245[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:245[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:247[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:247[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:247[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:247[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:249[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:249[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:250[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:250[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:253[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:253[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:254[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:254[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:256[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:256[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:257[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:257[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:259[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:259[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:260[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:260[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:262[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:262[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:263[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:263[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:265[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:265[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:265[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:265[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:268[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:268[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:268[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:268[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:271[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:271[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:271[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:271[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:273[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:273[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:274[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:274[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:276[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:276[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:277[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:277[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:279[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:279[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:279[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:279[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:281[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:281[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:282[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:282[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:284[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:284[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:285[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:285[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:287[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:287[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:288[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:288[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:290[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:290[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:291[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:291[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:293[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:293[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:294[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:294[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:296[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:296[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:296[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:296[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:299[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:299[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:299[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:299[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:302[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:302[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:303[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:303[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:305[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:305[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:305[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:306[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:308[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:308[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:308[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:308[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:311[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:311[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:311[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:311[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:313[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:313[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:314[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:314[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:316[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:316[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:317[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:317[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:319[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:319[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:320[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:320[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:322[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:322[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:323[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:323[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:325[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:325[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:326[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:326[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:328[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:328[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:329[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:329[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:331[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:331[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:332[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:332[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:334[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:334[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:334[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:335[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:337[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:337[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:338[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:338[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:340[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:340[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:340[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:340[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:342[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:342[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:343[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:343[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:345[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:345[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:346[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:346[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:348[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:348[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:349[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:349[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:351[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:351[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:352[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:352[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:354[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:354[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:355[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:355[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:357[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:357[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:358[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:358[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:360[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:360[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:360[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:360[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:362[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:362[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:363[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:363[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:365[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:365[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:366[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:366[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:368[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:368[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:369[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:369[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:371[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:371[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:371[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:371[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:373[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:373[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:374[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:374[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:376[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:376[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:377[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:377[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:379[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:379[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:380[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:380[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:382[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:382[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:382[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:382[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:385[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:385[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:386[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:386[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:388[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:388[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:388[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:389[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:391[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:391[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:391[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:391[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:394[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:394[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:394[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:394[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:396[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:396[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:397[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:397[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:399[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:399[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:400[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:400[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:402[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:402[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:403[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:403[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:405[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:405[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:405[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:406[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:408[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:408[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:408[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:408[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:411[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:411[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:411[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:411[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:413[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:414[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:414[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:414[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:416[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:416[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:417[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:417[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:419[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:419[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:420[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:420[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:422[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:422[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:422[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:422[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:425[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:425[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:425[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:425[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:427[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:428[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:428[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:428[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:430[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:430[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:431[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:431[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:433[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:433[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:434[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:434[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:436[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:436[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:437[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:437[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:439[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:439[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:440[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:440[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:442[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:442[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:442[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:442[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:445[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:445[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:445[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:445[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:447[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:448[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:448[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:448[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:450[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:450[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:451[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:451[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:454[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:454[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:454[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:454[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:456[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:456[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:457[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:457[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:459[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:459[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:460[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:460[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:462[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:462[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:462[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:462[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:464[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:464[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:465[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:465[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:467[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:467[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:468[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:468[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:470[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:470[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:471[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:471[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:473[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:473[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:474[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:474[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:476[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:476[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:476[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:477[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:479[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:479[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:479[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:479[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:481[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:481[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:482[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:482[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:484[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:484[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:485[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:485[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:487[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:487[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:488[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:488[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:490[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:490[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:491[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:491[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:493[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:493[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:493[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:493[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:495[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:496[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:496[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:496[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:498[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:498[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:499[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:499[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:501[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:501[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:502[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:502[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:504[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:504[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:505[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:505[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:507[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:507[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:508[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:508[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:510[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:510[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:510[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:510[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:513[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:513[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:513[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:513[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:515[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:515[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:516[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:516[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:518[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:518[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:519[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:519[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:521[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:521[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:521[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:521[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:523[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:523[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:524[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:524[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:526[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:526[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:526[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:526[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:528[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:528[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:529[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:529[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:531[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:531[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:531[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:531[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:534[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:534[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:534[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:534[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:537[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:537[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:537[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:537[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:539[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:539[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:540[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:540[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:542[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:542[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:542[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:542[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:544[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:544[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:545[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:545[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:547[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:547[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:548[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:548[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:550[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:550[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:550[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:550[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:553[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:553[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:554[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:554[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:556[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:556[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:556[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:556[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:558[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:558[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:559[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:559[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:561[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:561[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:562[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:562[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:564[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:564[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:564[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:564[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:567[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:567[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:567[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:567[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:570[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:570[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:570[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:570[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:572[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:572[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:573[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:573[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:575[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:575[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:576[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:576[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:578[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:578[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:578[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:578[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:581[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:581[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:581[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:581[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:583[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:583[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:584[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:584[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:586[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:586[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:587[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:587[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:589[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:589[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:590[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:590[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:592[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:592[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:592[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:592[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:594[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:594[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:595[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:595[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:597[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:597[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:598[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:598[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:600[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:600[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:601[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:601[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:603[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:603[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:604[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:604[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:606[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:606[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:607[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:607[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:609[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:609[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:609[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:609[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:611[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:613[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:615[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:615[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:617[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:617[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:618[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:618[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:620[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:620[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:621[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:621[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:623[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:623[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:623[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:623[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:625[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:625[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:626[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:626[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:628[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:628[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:628[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:628[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:630[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:630[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:631[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:631[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:633[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:633[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:634[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:634[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:636[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:636[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:636[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:636[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:639[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:639[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:639[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:639[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:641[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:641[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:642[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:642[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:644[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:644[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:644[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:644[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:646[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:646[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:647[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:647[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:649[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:649[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:650[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:650[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:652[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:652[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:653[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:653[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:655[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:655[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:655[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:655[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:658[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:658[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:658[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:658[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:660[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:660[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:661[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:661[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:663[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:663[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:664[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:664[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:666[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:666[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:666[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:666[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:669[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:669[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:670[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:670[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:672[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:672[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:672[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:672[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:674[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:674[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:675[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:675[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:677[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:677[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:678[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:678[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:680[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:680[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:680[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:680[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:683[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:683[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:683[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:683[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:686[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:686[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:686[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:686[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:688[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:688[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:689[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:689[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:691[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:691[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:692[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:692[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:694[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:694[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:695[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:695[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:697[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:697[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:697[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:697[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:700[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:700[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:700[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:700[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:702[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:702[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:703[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:703[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:705[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:705[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:706[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:706[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:708[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:708[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:709[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:709[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:711[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:711[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:711[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:711[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:713[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:713[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:714[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:714[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:716[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:716[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:716[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:716[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:719[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:719[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:719[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:720[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:722[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:722[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:723[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:723[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:725[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:725[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:725[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:725[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:727[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:727[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:728[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:728[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:730[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:730[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:731[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:731[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:733[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:733[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:733[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:733[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:736[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:736[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:737[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:737[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:739[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:739[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:740[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:740[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:742[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:742[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:743[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:743[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:745[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:745[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:745[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:745[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:747[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:747[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:748[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:748[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:750[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:750[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:750[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:750[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:753[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:753[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:754[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:754[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:756[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:756[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:756[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:756[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:758[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:759[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:759[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:759[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:761[Info         ] GetUniformLocation [lPos] successful.
+2016-08-08 12:28:08:761[Info         ] GetUniformLocation [lVec] successful.
+2016-08-08 12:28:08:764[cProcess     ] BufferManager::Shutdown() successful.
+2016-08-08 12:28:08:766[cProcess     ] RenderEngine::Shutdown() successful.
+2016-08-08 12:28:08:767[cProcess     ] Camera::Shutdown() successful.
+2016-08-08 12:28:08:771[cInfo        ] Shader  [2] deleting...
+2016-08-08 12:28:08:775[cInfo        ] Shader  [2] deleted successfully.
+2016-08-08 12:28:08:777[cInfo        ] Shader  [3] deleting...
+2016-08-08 12:28:08:778[cInfo        ] Shader  [3] deleted successfully.
+2016-08-08 12:28:08:780[Info         ] All shaders deleted successfully.
+2016-08-08 12:28:08:780[cInfo        ] Program [1] deleted successfully.
+2016-08-08 12:28:08:781[cProcess     ] ShaderProgram[1]::Shutdown successful!
+2016-08-08 12:28:08:783[cInfo        ] Shader  [5] deleting...
+2016-08-08 12:28:08:787[cInfo        ] Shader  [5] deleted successfully.
+2016-08-08 12:28:08:789[cInfo        ] Shader  [6] deleting...
+2016-08-08 12:28:08:790[cInfo        ] Shader  [6] deleted successfully.
+2016-08-08 12:28:08:792[Info         ] All shaders deleted successfully.
+2016-08-08 12:28:08:792[cInfo        ] Program [4] deleted successfully.
+2016-08-08 12:28:08:793[cProcess     ] ShaderProgram[4]::Shutdown successful!
+2016-08-08 12:28:08:796[cInfo        ] Shader  [8] deleting...
+2016-08-08 12:28:08:800[cInfo        ] Shader  [8] deleted successfully.
+2016-08-08 12:28:08:802[cInfo        ] Shader  [9] deleting...
+2016-08-08 12:28:08:804[cInfo        ] Shader  [9] deleted successfully.
+2016-08-08 12:28:08:805[Info         ] All shaders deleted successfully.
+2016-08-08 12:28:08:805[cInfo        ] Program [7] deleted successfully.
+2016-08-08 12:28:08:807[cProcess     ] ShaderProgram[7]::Shutdown successful!
+2016-08-08 12:28:08:809[cInfo        ] Shader  [11] deleting...
+2016-08-08 12:28:08:813[cInfo        ] Shader  [11] deleted successfully.
+2016-08-08 12:28:08:815[cInfo        ] Shader  [12] deleting...
+2016-08-08 12:28:08:816[cInfo        ] Shader  [12] deleted successfully.
+2016-08-08 12:28:08:819[Info         ] All shaders deleted successfully.
+2016-08-08 12:28:08:819[cInfo        ] Program [10] deleted successfully.
+2016-08-08 12:28:08:821[cProcess     ] ShaderProgram[10]::Shutdown successful!
+2016-08-08 12:28:08:823[cInfo        ] Shader  [14] deleting...
+2016-08-08 12:28:08:827[cInfo        ] Shader  [14] deleted successfully.
+2016-08-08 12:28:08:829[cInfo        ] Shader  [15] deleting...
+2016-08-08 12:28:08:830[cInfo        ] Shader  [15] deleted successfully.
+2016-08-08 12:28:08:833[Info         ] All shaders deleted successfully.
+2016-08-08 12:28:08:834[cInfo        ] Program [13] deleted successfully.
+2016-08-08 12:28:08:835[cProcess     ] ShaderProgram[13]::Shutdown successful!
+2016-08-08 12:28:08:838[cProcess     ] MyWindow::Shutdown() successful!
+2016-08-08 12:28:08:840[cProcess     ] BodaciousQuest::Shutdown() successful.
+2016-08-08 12:28:08:850[Process      ] ConfigReader shut down successfully
+2016-08-08 12:28:08:850[Process      ] GameLogger::ShutDown() successful

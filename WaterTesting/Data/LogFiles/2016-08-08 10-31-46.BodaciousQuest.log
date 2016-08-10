@@ -1,0 +1,588 @@
+2016-08-08 10:31:46:469[Process      ] GameLogger::Initialize() opened log file [..\Data\LogFiles\2016-08-08 10-31-46.BodaciousQuest.log] for writing
+2016-08-08 10:31:46:470[Info         ] GameLogger::Initialize() successful
+2016-08-08 10:31:46:470[Process      ] ConfigReader opened [..\Data\BodaciousQuest.config] successfully
+2016-08-08 10:31:46:470[Info         ] ConfigReader initialized successfully
+2016-08-08 10:31:46:470[Info         ] Valid KVP [BodaciousQuest.ShowFullScreen] [false] added
+2016-08-08 10:31:46:470[Info         ] Valid KVP [BodaciousQuest.FpsInterval] [5.0] added
+2016-08-08 10:31:46:470[Info         ] Valid KVP [BodaciousQuest.EnableControls] [true] added
+2016-08-08 10:31:46:470[Info         ] Valid KVP [BodaciousQuest.LoadCubeFirst] [true] added
+2016-08-08 10:31:46:470[Info         ] Valid KVP [BodaciousQuest.CameraWalkMode] [false] added
+2016-08-08 10:31:46:470[Info         ] Valid KVP [BodaciousQuest.GridSize] [40] added
+2016-08-08 10:31:46:470[Info         ] Valid KVP [ObjConverter.Mode.VertexType] [pn] added
+2016-08-08 10:31:46:470[Info         ] Valid KVP [ObjConverter.Mode.Analyze] [false] added
+2016-08-08 10:31:46:470[Info         ] Valid KVP [ObjConverter.Model] [Chicken] added
+2016-08-08 10:31:46:470[Info         ] Valid KVP [ObjConverter.Color] [random] added
+2016-08-08 10:31:46:470[Info         ] Valid KVP [ObjConverter.Obj.InputFileFolder] [..\\Data\\Objs\\] added
+2016-08-08 10:31:46:470[Info         ] Valid KVP [ObjConverter.Scene.OutputFileFolder] [..\\Data\\Scenes\\] added
+2016-08-08 10:31:46:470[Info         ] Valid KVP [ObjConverter.Model.Dargon.NumVerts] [57967] added
+2016-08-08 10:31:46:470[Info         ] Valid KVP [ObjConverter.Model.Dargon.NumIndices] [337824] added
+2016-08-08 10:31:46:470[Info         ] Valid KVP [ObjConverter.Model.Dargon.NumTexCoords] [60175] added
+2016-08-08 10:31:46:470[Info         ] Valid KVP [ObjConverter.Model.Dargon.NumNormals] [0] added
+2016-08-08 10:31:46:470[Info         ] Valid KVP [ObjConverter.Model.Pyramid.NumVerts] [5] added
+2016-08-08 10:31:46:470[Info         ] Valid KVP [ObjConverter.Model.Pyramid.NumIndices] [18] added
+2016-08-08 10:31:46:470[Info         ] Valid KVP [ObjConverter.Model.Pyramid.NumTexCoords] [10] added
+2016-08-08 10:31:46:470[Info         ] Valid KVP [ObjConverter.Model.Pyramid.NumNormals] [16] added
+2016-08-08 10:31:46:470[Info         ] Valid KVP [ObjConverter.Model.AIWorld.NumVerts] [1957] added
+2016-08-08 10:31:46:470[Info         ] Valid KVP [ObjConverter.Model.AIWorld.NumIndices] [8718] added
+2016-08-08 10:31:46:471[Info         ] Valid KVP [ObjConverter.Model.AIWorld.NumTexCoords] [4186] added
+2016-08-08 10:31:46:471[Info         ] Valid KVP [ObjConverter.Model.AIWorld.NumNormals] [5418] added
+2016-08-08 10:31:46:471[Info         ] Valid KVP [ObjConverter.Model.GameWeapon.NumVerts] [2068] added
+2016-08-08 10:31:46:471[Info         ] Valid KVP [ObjConverter.Model.GameWeapon.NumIndices] [9894] added
+2016-08-08 10:31:46:471[Info         ] Valid KVP [ObjConverter.Model.GameWeapon.NumTexCoords] [0] added
+2016-08-08 10:31:46:471[Info         ] Valid KVP [ObjConverter.Model.GameWeapon.NumNormals] [0] added
+2016-08-08 10:31:46:471[Info         ] Valid KVP [ObjConverter.Model.Chicken.NumVerts] [224] added
+2016-08-08 10:31:46:471[Info         ] Valid KVP [ObjConverter.Model.Chicken.NumIndices] [1374] added
+2016-08-08 10:31:46:471[Info         ] Valid KVP [ObjConverter.Model.Chicken.NumTexCoords] [472] added
+2016-08-08 10:31:46:471[Info         ] Valid KVP [ObjConverter.Model.Chicken.NumNormals] [565] added
+2016-08-08 10:31:46:574[Process      ] ShaderManager Initialized successfully
+2016-08-08 10:31:46:574[cInfo        ] Shader Init started
+2016-08-08 10:31:46:575[cInfo        ] Shader Program created.
+2016-08-08 10:31:46:576[cProcess     ] ShaderProgram::Initialize() successful!
+2016-08-08 10:31:46:578[Debug        ] File [..\Data\shaders\debug.vert.shader] Opened successfully! Buffer Length:[291]
+2016-08-08 10:31:46:579[Debug        ] Shader file [..\Data\shaders\debug.vert.shader] contents:
+//BEGIN
+#version 430 core
+
+layout(location = 0)  in vec3 vPosition;
+
+layout(location = 15) uniform vec3 colorin;
+layout(location = 16) uniform mat4 MAT;
+
+out vec4 color;
+
+void main()
+{
+	vec4 vertPos = vec4(vPosition, 1.0);
+	gl_Position = MAT *  vertPos;
+	color = vec4(colorin, 1.0);
+}
+//END
+
+2016-08-08 10:31:46:579[Debug        ]  ShaderProgram::AddShader() file with data was read in
+2016-08-08 10:31:46:579[Debug        ] ShaderProgram::AddShader() : glShaderSource() successful
+2016-08-08 10:31:46:579[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 10:31:46:581[Info         ] ShaderProgram::CheckShaderCompileStatus(2) successful.
+2016-08-08 10:31:46:581[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 10:31:46:585[cInfo        ] ShaderInfo saved successfully.
+2016-08-08 10:31:46:588[cDebug       ] ShaderProgram::AddShader() : glAttachShader() successful
+2016-08-08 10:31:46:595[Info         ] ShaderProgram::AddShader [2] successful.
+2016-08-08 10:31:46:595[Debug        ] File [..\Data\shaders\debug.frag.shader] Opened successfully! Buffer Length:[104]
+2016-08-08 10:31:46:595[Debug        ] Shader file [..\Data\shaders\debug.frag.shader] contents:
+//BEGIN
+#version 430 core
+
+
+in  vec4 color;
+out vec4 outColor;
+
+void main()
+{
+	outColor = color;
+}
+
+
+//END
+
+2016-08-08 10:31:46:595[Debug        ]  ShaderProgram::AddShader() file with data was read in
+2016-08-08 10:31:46:595[Debug        ] ShaderProgram::AddShader() : glShaderSource() successful
+2016-08-08 10:31:46:595[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 10:31:46:598[Info         ] ShaderProgram::CheckShaderCompileStatus(3) successful.
+2016-08-08 10:31:46:598[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 10:31:46:601[cInfo        ] ShaderInfo saved successfully.
+2016-08-08 10:31:46:607[cDebug       ] ShaderProgram::AddShader() : glAttachShader() successful
+2016-08-08 10:31:46:610[Info         ] ShaderProgram::AddShader [3] successful.
+2016-08-08 10:31:46:611[cInfo        ] CheckProgramStatus() successful!
+2016-08-08 10:31:46:613[cInfo        ] CheckProgramStatus() successful!
+2016-08-08 10:31:46:614[cInfo        ] Shader Init started
+2016-08-08 10:31:46:615[cInfo        ] Shader Program created.
+2016-08-08 10:31:46:618[cProcess     ] ShaderProgram::Initialize() successful!
+2016-08-08 10:31:46:620[Debug        ] File [..\Data\shaders\play.vert.shader] Opened successfully! Buffer Length:[343]
+2016-08-08 10:31:46:620[Debug        ] Shader file [..\Data\shaders\play.vert.shader] contents:
+//BEGIN
+#version 430 core
+
+layout (location = 0)  in vec3 vPosition;
+layout (location = 1)  in vec3 vColor;
+layout (location = 15) uniform vec3 colorin;
+layout (location = 16) uniform mat4 MAT;
+
+out vec4 color;
+
+void main()
+{
+	vec4 vertPos = vec4(vPosition, 1.0);
+	gl_Position = MAT *  vertPos;
+	color = vec4((vColor + colorin), 1.0);
+}
+//END
+
+2016-08-08 10:31:46:620[Debug        ]  ShaderProgram::AddShader() file with data was read in
+2016-08-08 10:31:46:620[Debug        ] ShaderProgram::AddShader() : glShaderSource() successful
+2016-08-08 10:31:46:621[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 10:31:46:626[Info         ] ShaderProgram::CheckShaderCompileStatus(5) successful.
+2016-08-08 10:31:46:626[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 10:31:46:628[cInfo        ] ShaderInfo saved successfully.
+2016-08-08 10:31:46:629[cDebug       ] ShaderProgram::AddShader() : glAttachShader() successful
+2016-08-08 10:31:46:632[Info         ] ShaderProgram::AddShader [5] successful.
+2016-08-08 10:31:46:633[Debug        ] File [..\Data\shaders\play.frag.shader] Opened successfully! Buffer Length:[391]
+2016-08-08 10:31:46:633[Debug        ] Shader file [..\Data\shaders\play.frag.shader] contents:
+//BEGIN
+#version 430 core
+
+
+in  vec4 color;
+out vec4 outColor;
+
+void main()
+{
+
+	//if (color.r < .7) discard;
+	outColor = color;
+
+	//if(((gl_FragCoord.x  > 600)&& (gl_FragCoord.y < 300)) || ((gl_FragCoord.y < 300)  && (gl_FragCoord.x  < 600) )) {
+	//discard;
+	//}
+
+	//vec2 scrPos = vec2(gl_FragCoord) - vec2(350,150);
+	//float len =  length(scrPos);
+	//if(len < 50 )discard;
+}
+
+
+//END
+
+2016-08-08 10:31:46:633[Debug        ]  ShaderProgram::AddShader() file with data was read in
+2016-08-08 10:31:46:633[Debug        ] ShaderProgram::AddShader() : glShaderSource() successful
+2016-08-08 10:31:46:633[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 10:31:46:636[Info         ] ShaderProgram::CheckShaderCompileStatus(6) successful.
+2016-08-08 10:31:46:636[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 10:31:46:639[cInfo        ] ShaderInfo saved successfully.
+2016-08-08 10:31:46:641[cDebug       ] ShaderProgram::AddShader() : glAttachShader() successful
+2016-08-08 10:31:46:644[Info         ] ShaderProgram::AddShader [6] successful.
+2016-08-08 10:31:46:645[cInfo        ] CheckProgramStatus() successful!
+2016-08-08 10:31:46:646[cInfo        ] CheckProgramStatus() successful!
+2016-08-08 10:31:46:648[cInfo        ] Shader Init started
+2016-08-08 10:31:46:649[cInfo        ] Shader Program created.
+2016-08-08 10:31:46:652[cProcess     ] ShaderProgram::Initialize() successful!
+2016-08-08 10:31:46:654[Debug        ] File [..\Data\shaders\texture.vert.shader] Opened successfully! Buffer Length:[305]
+2016-08-08 10:31:46:654[Debug        ] Shader file [..\Data\shaders\texture.vert.shader] contents:
+//BEGIN
+#version 430 core
+
+layout (location = 0)  in vec3 vPosition;
+layout (location = 1)  in vec2 vUV;
+
+layout (location = 16) uniform mat4 MAT;
+
+//out data
+out vec2 UV;
+
+//out vec4 color;
+
+void main()
+{
+	vec4 vertPos = vec4(vPosition, 1.0);
+	gl_Position = MAT *  vertPos;
+
+	UV = vUV;
+	
+	
+}
+//END
+
+2016-08-08 10:31:46:654[Debug        ]  ShaderProgram::AddShader() file with data was read in
+2016-08-08 10:31:46:654[Debug        ] ShaderProgram::AddShader() : glShaderSource() successful
+2016-08-08 10:31:46:654[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 10:31:46:659[Info         ] ShaderProgram::CheckShaderCompileStatus(8) successful.
+2016-08-08 10:31:46:659[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 10:31:46:661[cInfo        ] ShaderInfo saved successfully.
+2016-08-08 10:31:46:662[cDebug       ] ShaderProgram::AddShader() : glAttachShader() successful
+2016-08-08 10:31:46:666[Info         ] ShaderProgram::AddShader [8] successful.
+2016-08-08 10:31:46:666[Debug        ] File [..\Data\shaders\texture.frag.shader] Opened successfully! Buffer Length:[484]
+2016-08-08 10:31:46:666[Debug        ] Shader file [..\Data\shaders\texture.frag.shader] contents:
+//BEGIN
+#version 430 core
+
+
+in  vec2 UV;
+out vec4 outColor;
+
+layout(location = 20) uniform sampler2D textureSampler;
+
+void main()
+{
+
+	//if (color.r < .7) discard;
+	outColor = vec4(texture(textureSampler, UV).rgb, 1.0);
+
+	//if(((gl_FragCoord.x  > 600)&& (gl_FragCoord.y < 300)) || ((gl_FragCoord.y < 300)  && (gl_FragCoord.x  < 600) )) {
+	//discard;
+	//}
+
+	//vec2 scrPos = vec2(gl_FragCoord) - vec2(350,150);
+	//float len =  length(scrPos);
+	//if(len < 50 )discard;
+}
+
+
+//END
+
+2016-08-08 10:31:46:666[Debug        ]  ShaderProgram::AddShader() file with data was read in
+2016-08-08 10:31:46:666[Debug        ] ShaderProgram::AddShader() : glShaderSource() successful
+2016-08-08 10:31:46:667[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 10:31:46:671[Info         ] ShaderProgram::CheckShaderCompileStatus(9) successful.
+2016-08-08 10:31:46:671[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 10:31:46:673[cInfo        ] ShaderInfo saved successfully.
+2016-08-08 10:31:46:674[cDebug       ] ShaderProgram::AddShader() : glAttachShader() successful
+2016-08-08 10:31:46:676[Info         ] ShaderProgram::AddShader [9] successful.
+2016-08-08 10:31:46:678[cInfo        ] CheckProgramStatus() successful!
+2016-08-08 10:31:46:679[cInfo        ] CheckProgramStatus() successful!
+2016-08-08 10:31:46:680[cInfo        ] Shader Init started
+2016-08-08 10:31:46:681[cInfo        ] Shader Program created.
+2016-08-08 10:31:46:683[cProcess     ] ShaderProgram::Initialize() successful!
+2016-08-08 10:31:46:686[Debug        ] File [..\Data\shaders\framebuffer.vert.shader] Opened successfully! Buffer Length:[305]
+2016-08-08 10:31:46:686[Debug        ] Shader file [..\Data\shaders\framebuffer.vert.shader] contents:
+//BEGIN
+#version 430 core
+
+layout (location = 0)  in vec3 vPosition;
+layout (location = 1)  in vec2 vUV;
+
+layout (location = 16) uniform mat4 MAT;
+
+//out data
+out vec2 UV;
+
+//out vec4 color;
+
+void main()
+{
+	vec4 vertPos = vec4(vPosition, 1.0);
+	gl_Position = MAT *  vertPos;
+
+	UV = vUV;
+	
+	
+}
+//END
+
+2016-08-08 10:31:46:686[Debug        ]  ShaderProgram::AddShader() file with data was read in
+2016-08-08 10:31:46:686[Debug        ] ShaderProgram::AddShader() : glShaderSource() successful
+2016-08-08 10:31:46:687[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 10:31:46:692[Info         ] ShaderProgram::CheckShaderCompileStatus(11) successful.
+2016-08-08 10:31:46:692[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 10:31:46:694[cInfo        ] ShaderInfo saved successfully.
+2016-08-08 10:31:46:695[cDebug       ] ShaderProgram::AddShader() : glAttachShader() successful
+2016-08-08 10:31:46:699[Info         ] ShaderProgram::AddShader [11] successful.
+2016-08-08 10:31:46:699[Debug        ] File [..\Data\shaders\framebuffer.frag.shader] Opened successfully! Buffer Length:[597]
+2016-08-08 10:31:46:699[Debug        ] Shader file [..\Data\shaders\framebuffer.frag.shader] contents:
+//BEGIN
+#version 430 core
+
+
+in  vec2 UV;
+out vec4 outColor;
+
+layout(location = 20) uniform sampler2D textureSampler;
+
+void main()
+{
+
+	//if (color.r < .7) discard;
+	vec3 tempCol = texture(textureSampler, UV).rgb;
+	if (tempCol == vec3(0, 0, 0)) discard;
+	outColor = vec4(tempCol.r / 2.0f, tempCol.g / 2.0f, tempCol.b / 2.0f, 1.0f);
+
+	//if(((gl_FragCoord.x  > 600)&& (gl_FragCoord.y < 300)) || ((gl_FragCoord.y < 300)  && (gl_FragCoord.x  < 600) )) {
+	//discard;
+	//}
+
+	//vec2 scrPos = vec2(gl_FragCoord) - vec2(350,150);
+	//float len =  length(scrPos);
+	//if(len < 50 )discard;
+}
+
+
+//END
+
+2016-08-08 10:31:46:699[Debug        ]  ShaderProgram::AddShader() file with data was read in
+2016-08-08 10:31:46:699[Debug        ] ShaderProgram::AddShader() : glShaderSource() successful
+2016-08-08 10:31:46:699[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 10:31:46:703[Info         ] ShaderProgram::CheckShaderCompileStatus(12) successful.
+2016-08-08 10:31:46:703[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 10:31:46:705[cInfo        ] ShaderInfo saved successfully.
+2016-08-08 10:31:46:708[cDebug       ] ShaderProgram::AddShader() : glAttachShader() successful
+2016-08-08 10:31:46:710[Info         ] ShaderProgram::AddShader [12] successful.
+2016-08-08 10:31:46:712[cInfo        ] CheckProgramStatus() successful!
+2016-08-08 10:31:46:713[cInfo        ] CheckProgramStatus() successful!
+2016-08-08 10:31:46:714[cInfo        ] Shader Init started
+2016-08-08 10:31:46:715[cInfo        ] Shader Program created.
+2016-08-08 10:31:46:718[cProcess     ] ShaderProgram::Initialize() successful!
+2016-08-08 10:31:46:720[Debug        ] File [..\Data\shaders\lighting.vert.shader] Opened successfully! Buffer Length:[457]
+2016-08-08 10:31:46:720[Debug        ] Shader file [..\Data\shaders\lighting.vert.shader] contents:
+//BEGIN
+#version 430 core
+
+layout (location = 0)  in vec3 vPosition;
+layout (location = 1)  in vec3 vNorm;
+layout(location = 15) uniform vec3 tint;
+layout (location = 16) uniform mat4 MAT;
+
+//out data
+out vec3 normal;
+out vec3 color;
+
+//out vec4 color;
+
+void main()
+{
+	vec4 vertPos = vec4(vPosition + vNorm/3.0f, 1.0);
+	gl_Position = MAT *  (vertPos);
+	color = vec3(tint.r + vNorm.x, tint.g + vNorm.y, tint.b + vNorm.z);
+	normal = vNorm;
+	
+	
+}
+//END
+
+2016-08-08 10:31:46:721[Debug        ]  ShaderProgram::AddShader() file with data was read in
+2016-08-08 10:31:46:721[Debug        ] ShaderProgram::AddShader() : glShaderSource() successful
+2016-08-08 10:31:46:721[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 10:31:46:723[Info         ] ShaderProgram::CheckShaderCompileStatus(14) successful.
+2016-08-08 10:31:46:723[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 10:31:46:724[cInfo        ] ShaderInfo saved successfully.
+2016-08-08 10:31:46:726[cDebug       ] ShaderProgram::AddShader() : glAttachShader() successful
+2016-08-08 10:31:46:729[Info         ] ShaderProgram::AddShader [14] successful.
+2016-08-08 10:31:46:729[Debug        ] File [..\Data\shaders\lighting.frag.shader] Opened successfully! Buffer Length:[522]
+2016-08-08 10:31:46:729[Debug        ] Shader file [..\Data\shaders\lighting.frag.shader] contents:
+//BEGIN
+#version 430 core
+
+
+in  vec3 normal;
+in  vec3 color;
+out vec4 outColor;
+
+layout(location = 20) uniform sampler2D textureSampler;
+
+void main()
+{
+
+	//if (color.r < .7) discard;
+	outColor = vec4(color, 1.0f);//vec4(normal.x, normal.y, normal.z, 1.0);
+
+	//if(((gl_FragCoord.x  > 600)&& (gl_FragCoord.y < 300)) || ((gl_FragCoord.y < 300)  && (gl_FragCoord.x  < 600) )) {
+	//discard;
+	//}
+
+	//vec2 scrPos = vec2(gl_FragCoord) - vec2(350,150);
+	//float len =  length(scrPos);
+	//if(len < 50 )discard;
+}
+
+
+//END
+
+2016-08-08 10:31:46:729[Debug        ]  ShaderProgram::AddShader() file with data was read in
+2016-08-08 10:31:46:729[Debug        ] ShaderProgram::AddShader() : glShaderSource() successful
+2016-08-08 10:31:46:729[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 10:31:46:731[Info         ] ShaderProgram::CheckShaderCompileStatus(15) successful.
+2016-08-08 10:31:46:731[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 10:31:46:734[cInfo        ] ShaderInfo saved successfully.
+2016-08-08 10:31:46:738[cDebug       ] ShaderProgram::AddShader() : glAttachShader() successful
+2016-08-08 10:31:46:739[Info         ] ShaderProgram::AddShader [15] successful.
+2016-08-08 10:31:46:741[cInfo        ] CheckProgramStatus() successful!
+2016-08-08 10:31:46:742[cInfo        ] CheckProgramStatus() successful!
+2016-08-08 10:31:46:743[cProcess     ] BufferManager::Initialize() successful.
+2016-08-08 10:31:46:745[Info         ] GetAttribLocation [vPosition] successful.
+2016-08-08 10:31:46:745[Info         ] GetUniformLocation [colorin] successful.
+2016-08-08 10:31:46:745[Info         ] GetUniformLocation [MAT] successful.
+2016-08-08 10:31:46:745[cProcess     ] RenderEngine::Initialize() successful.
+2016-08-08 10:31:46:746[cProcess     ] BufferManager::Initialize() successful.
+2016-08-08 10:31:46:748[cInfo        ] 
+-----------------------------------------------------------------------
+ BufferInfo::CreateBuffers()[1] Created buffers:| VERTEX [1] with [1000000] bytes. || INDEX [2] with [1000000] bytes |
+-----------------------------------------------------------------------
+
+2016-08-08 10:31:46:758[cInfo        ] --------BufferInfo::AddMesh() Added mesh successfully-------
+2016-08-08 10:31:46:763[cInfo        ] 
+2016-08-08 10:31:46:763[cInfo        ] --------------------| START BUFFER MESH INFO |-------------------------------------
+2016-08-08 10:31:46:769[cInfo        ] BufferInfo::AddMesh(): NUM VERTS-----------------[4]
+2016-08-08 10:31:46:771[cInfo        ] BufferInfo::AddMesh(): NUM INDICES---------------[6]
+2016-08-08 10:31:46:773[cInfo        ] BufferInfo::AddMesh(): VERT OFFSET---------------[0]
+2016-08-08 10:31:46:774[cInfo        ] BufferInfo::AddMesh(): INDICES OFFSET (BYTES)----[0]
+2016-08-08 10:31:46:776[cInfo        ] --------------------|  END BUFFER MESH INFO  |--------------------------------------
+2016-08-08 10:31:46:779[cInfo        ] 
+
+2016-08-08 10:31:46:782[cProcess     ] BufferManager::Initialize() successful.
+2016-08-08 10:31:46:785[cInfo        ] 
+-----------------------------------------------------------------------
+ BufferInfo::CreateBuffers()[2] Created buffers:| VERTEX [3] with [1000000] bytes. || INDEX [4] with [1000000] bytes |
+-----------------------------------------------------------------------
+
+2016-08-08 10:31:46:797[cInfo        ] --------BufferInfo::AddMesh() Added mesh successfully-------
+2016-08-08 10:31:46:802[cInfo        ] 
+2016-08-08 10:31:46:802[cInfo        ] --------------------| START BUFFER MESH INFO |-------------------------------------
+2016-08-08 10:31:46:808[cInfo        ] BufferInfo::AddMesh(): NUM VERTS-----------------[8]
+2016-08-08 10:31:46:809[cInfo        ] BufferInfo::AddMesh(): NUM INDICES---------------[24]
+2016-08-08 10:31:46:811[cInfo        ] BufferInfo::AddMesh(): VERT OFFSET---------------[0]
+2016-08-08 10:31:46:813[cInfo        ] BufferInfo::AddMesh(): INDICES OFFSET (BYTES)----[0]
+2016-08-08 10:31:46:815[cInfo        ] --------------------|  END BUFFER MESH INFO  |--------------------------------------
+2016-08-08 10:31:46:818[cInfo        ] 
+
+2016-08-08 10:31:46:822[cProcess     ] BufferManager::Initialize() successful.
+2016-08-08 10:31:46:825[cInfo        ] 
+-----------------------------------------------------------------------
+ BufferInfo::CreateBuffers()[3] Created buffers:| VERTEX [5] with [1000000] bytes. || INDEX [6] with [1000000] bytes |
+-----------------------------------------------------------------------
+
+2016-08-08 10:31:46:837[cInfo        ] --------BufferInfo::AddMesh() Added mesh successfully-------
+2016-08-08 10:31:46:842[cInfo        ] 
+2016-08-08 10:31:46:842[cInfo        ] --------------------| START BUFFER MESH INFO |-------------------------------------
+2016-08-08 10:31:46:847[cInfo        ] BufferInfo::AddMesh(): NUM VERTS-----------------[36]
+2016-08-08 10:31:46:849[cInfo        ] BufferInfo::AddMesh(): NUM INDICES---------------[0]
+2016-08-08 10:31:46:853[cInfo        ] BufferInfo::AddMesh(): VERT OFFSET---------------[0]
+2016-08-08 10:31:46:854[cInfo        ] BufferInfo::AddMesh(): INDICES OFFSET (BYTES)----[0]
+2016-08-08 10:31:46:856[cInfo        ] --------------------|  END BUFFER MESH INFO  |--------------------------------------
+2016-08-08 10:31:46:859[cInfo        ] 
+
+2016-08-08 10:31:46:862[cInfo        ] --------BufferInfo::AddMesh() Added mesh successfully-------
+2016-08-08 10:31:46:864[cInfo        ] 
+2016-08-08 10:31:46:864[cInfo        ] --------------------| START BUFFER MESH INFO |-------------------------------------
+2016-08-08 10:31:46:869[cInfo        ] BufferInfo::AddMesh(): NUM VERTS-----------------[24]
+2016-08-08 10:31:46:871[cInfo        ] BufferInfo::AddMesh(): NUM INDICES---------------[36]
+2016-08-08 10:31:46:873[cInfo        ] BufferInfo::AddMesh(): VERT OFFSET---------------[36]
+2016-08-08 10:31:46:874[cInfo        ] BufferInfo::AddMesh(): INDICES OFFSET (BYTES)----[0]
+2016-08-08 10:31:46:876[cInfo        ] --------------------|  END BUFFER MESH INFO  |--------------------------------------
+2016-08-08 10:31:46:879[cInfo        ] 
+
+2016-08-08 10:31:46:889[cInfo        ] --------BufferInfo::AddMesh() Added mesh successfully-------
+2016-08-08 10:31:46:894[cInfo        ] 
+2016-08-08 10:31:46:894[cInfo        ] --------------------| START BUFFER MESH INFO |-------------------------------------
+2016-08-08 10:31:46:899[cInfo        ] BufferInfo::AddMesh(): NUM VERTS-----------------[1536]
+2016-08-08 10:31:46:902[cInfo        ] BufferInfo::AddMesh(): NUM INDICES---------------[3072]
+2016-08-08 10:31:46:904[cInfo        ] BufferInfo::AddMesh(): VERT OFFSET---------------[8]
+2016-08-08 10:31:46:905[cInfo        ] BufferInfo::AddMesh(): INDICES OFFSET (BYTES)----[48]
+2016-08-08 10:31:46:907[cInfo        ] --------------------|  END BUFFER MESH INFO  |--------------------------------------
+2016-08-08 10:31:46:910[cInfo        ] 
+
+2016-08-08 10:31:46:913[cProcess     ] BufferManager::Initialize() successful.
+2016-08-08 10:31:46:917[cInfo        ] 
+-----------------------------------------------------------------------
+ BufferInfo::CreateBuffers()[4] Created buffers:| VERTEX [7] with [1000000] bytes. || INDEX [8] with [1000000] bytes |
+-----------------------------------------------------------------------
+
+2016-08-08 10:31:46:929[cInfo        ] --------BufferInfo::AddMesh() Added mesh successfully-------
+2016-08-08 10:31:46:934[cInfo        ] 
+2016-08-08 10:31:46:935[cInfo        ] --------------------| START BUFFER MESH INFO |-------------------------------------
+2016-08-08 10:31:46:939[cInfo        ] BufferInfo::AddMesh(): NUM VERTS-----------------[164]
+2016-08-08 10:31:46:941[cInfo        ] BufferInfo::AddMesh(): NUM INDICES---------------[0]
+2016-08-08 10:31:46:943[cInfo        ] BufferInfo::AddMesh(): VERT OFFSET---------------[0]
+2016-08-08 10:31:46:945[cInfo        ] BufferInfo::AddMesh(): INDICES OFFSET (BYTES)----[0]
+2016-08-08 10:31:46:946[cInfo        ] --------------------|  END BUFFER MESH INFO  |--------------------------------------
+2016-08-08 10:31:46:949[cInfo        ] 
+
+2016-08-08 10:31:46:952[cProcess     ] ShapeGenerator initialized successfully.
+2016-08-08 10:31:46:955[cProcess     ] Camera::Initialize() successful.
+2016-08-08 10:31:46:956[cProcess     ] Keyboard::Initialize() successful
+2016-08-08 10:31:46:958[cProcess     ] Camera::Initialize() successful.
+2016-08-08 10:31:46:959[cInfo        ] BufferInfo [1] failed to add gob. Check if gob matches?
+2016-08-08 10:31:46:961[cInfo        ] BufferInfo [2] failed to add gob. Check if gob matches?
+2016-08-08 10:31:46:963[cInfo        ] BufferInfo [1] failed to add gob. Check if gob matches?
+2016-08-08 10:31:46:965[cInfo        ] BufferInfo [1] failed to add gob. Check if gob matches?
+2016-08-08 10:31:46:967[cInfo        ] BufferInfo [1] failed to add gob. Check if gob matches?
+2016-08-08 10:31:46:969[cInfo        ] BufferInfo [2] failed to add gob. Check if gob matches?
+2016-08-08 10:31:46:970[cInfo        ] BufferInfo [1] failed to add gob. Check if gob matches?
+2016-08-08 10:31:46:972[cInfo        ] BufferInfo [1] failed to add gob. Check if gob matches?
+2016-08-08 10:31:46:974[cInfo        ] BufferInfo [1] failed to add gob. Check if gob matches?
+2016-08-08 10:31:46:976[cInfo        ] BufferInfo [2] failed to add gob. Check if gob matches?
+2016-08-08 10:31:46:977[cInfo        ] BufferInfo [3] failed to add gob. Check if gob matches?
+2016-08-08 10:31:46:980[cProcess     ] BufferManager::Initialize() successful.
+2016-08-08 10:31:46:984[cInfo        ] 
+-----------------------------------------------------------------------
+ BufferInfo::CreateBuffers()[5] Created buffers:| VERTEX [9] with [1000000] bytes. || INDEX [10] with [1000000] bytes |
+-----------------------------------------------------------------------
+
+2016-08-08 10:31:46:994[cInfo        ] --------BufferInfo::AddMesh() Added mesh successfully-------
+2016-08-08 10:31:46:999[cInfo        ] 
+2016-08-08 10:31:47:001[cInfo        ] --------------------| START BUFFER MESH INFO |-------------------------------------
+2016-08-08 10:31:47:004[cInfo        ] BufferInfo::AddMesh(): NUM VERTS-----------------[1374]
+2016-08-08 10:31:47:006[cInfo        ] BufferInfo::AddMesh(): NUM INDICES---------------[0]
+2016-08-08 10:31:47:008[cInfo        ] BufferInfo::AddMesh(): VERT OFFSET---------------[0]
+2016-08-08 10:31:47:010[cInfo        ] BufferInfo::AddMesh(): INDICES OFFSET (BYTES)----[0]
+2016-08-08 10:31:47:011[cInfo        ] --------------------|  END BUFFER MESH INFO  |--------------------------------------
+2016-08-08 10:31:47:014[cInfo        ] 
+
+2016-08-08 10:31:47:018[Info         ] ShapeGenerator::ReadSceneFile(): Added new scene [..\Data\Scenes\Chicken.pn.scene] successfully.
+2016-08-08 10:31:47:018[cInfo        ] BufferInfo [1] failed to add gob. Check if gob matches?
+2016-08-08 10:31:47:021[cInfo        ] BufferInfo [2] failed to add gob. Check if gob matches?
+2016-08-08 10:31:47:023[cInfo        ] BufferInfo [3] failed to add gob. Check if gob matches?
+2016-08-08 10:31:47:025[cInfo        ] BufferInfo [4] failed to add gob. Check if gob matches?
+2016-08-08 10:31:47:035[cProcess     ] BufferManager::Initialize() successful.
+2016-08-08 10:31:47:038[cInfo        ] 
+-----------------------------------------------------------------------
+ BufferInfo::CreateBuffers()[6] Created buffers:| VERTEX [11] with [6756480] bytes. || INDEX [12] with [0] bytes |
+-----------------------------------------------------------------------
+
+2016-08-08 10:31:47:060[cInfo        ] --------BufferInfo::AddMesh() Added mesh successfully-------
+2016-08-08 10:31:47:063[cInfo        ] 
+2016-08-08 10:31:47:063[cInfo        ] --------------------| START BUFFER MESH INFO |-------------------------------------
+2016-08-08 10:31:47:069[cInfo        ] BufferInfo::AddMesh(): NUM VERTS-----------------[337824]
+2016-08-08 10:31:47:070[cInfo        ] BufferInfo::AddMesh(): NUM INDICES---------------[0]
+2016-08-08 10:31:47:072[cInfo        ] BufferInfo::AddMesh(): VERT OFFSET---------------[0]
+2016-08-08 10:31:47:074[cInfo        ] BufferInfo::AddMesh(): INDICES OFFSET (BYTES)----[0]
+2016-08-08 10:31:47:076[cInfo        ] --------------------|  END BUFFER MESH INFO  |--------------------------------------
+2016-08-08 10:31:47:078[cInfo        ] 
+
+2016-08-08 10:31:47:127[Info         ] ShapeGenerator::ReadSceneFile(): Added new scene [..\Data\Scenes\Dargon.pt.scene] successfully.
+2016-08-08 10:31:47:127[cInfo        ] BufferInfo [1] failed to add gob. Check if gob matches?
+2016-08-08 10:31:47:136[cInfo        ] BufferInfo [2] failed to add gob. Check if gob matches?
+2016-08-08 10:31:47:138[cInfo        ] BufferInfo [3] failed to add gob. Check if gob matches?
+2016-08-08 10:31:47:140[cInfo        ] BufferInfo [4] failed to add gob. Check if gob matches?
+2016-08-08 10:31:47:142[cInfo        ] BufferInfo [5] failed to add gob. Check if gob matches?
+2016-08-08 10:31:47:144[cProcess     ] BodaciousQuest::Initialize() successful.
+2016-08-08 10:31:47:145[Process      ] GameTime::Initialize() ok
+
+2016-08-08 10:31:47:145[cProcess     ] MyWindow::Initialize() successful!
+2016-08-08 10:31:51:845[cProcess     ] BufferManager::Shutdown() successful.
+2016-08-08 10:31:51:847[cProcess     ] RenderEngine::Shutdown() successful.
+2016-08-08 10:31:51:849[cProcess     ] Camera::Shutdown() successful.
+2016-08-08 10:31:51:852[cInfo        ] Shader  [2] deleting...
+2016-08-08 10:31:51:855[cInfo        ] Shader  [2] deleted successfully.
+2016-08-08 10:31:51:857[cInfo        ] Shader  [3] deleting...
+2016-08-08 10:31:51:858[cInfo        ] Shader  [3] deleted successfully.
+2016-08-08 10:31:51:860[Info         ] All shaders deleted successfully.
+2016-08-08 10:31:51:860[cInfo        ] Program [1] deleted successfully.
+2016-08-08 10:31:51:862[cProcess     ] ShaderProgram[1]::Shutdown successful!
+2016-08-08 10:31:51:864[cInfo        ] Shader  [5] deleting...
+2016-08-08 10:31:51:868[cInfo        ] Shader  [5] deleted successfully.
+2016-08-08 10:31:51:869[cInfo        ] Shader  [6] deleting...
+2016-08-08 10:31:51:870[cInfo        ] Shader  [6] deleted successfully.
+2016-08-08 10:31:51:873[Info         ] All shaders deleted successfully.
+2016-08-08 10:31:51:873[cInfo        ] Program [4] deleted successfully.
+2016-08-08 10:31:51:875[cProcess     ] ShaderProgram[4]::Shutdown successful!
+2016-08-08 10:31:51:877[cInfo        ] Shader  [8] deleting...
+2016-08-08 10:31:51:881[cInfo        ] Shader  [8] deleted successfully.
+2016-08-08 10:31:51:883[cInfo        ] Shader  [9] deleting...
+2016-08-08 10:31:51:884[cInfo        ] Shader  [9] deleted successfully.
+2016-08-08 10:31:51:886[Info         ] All shaders deleted successfully.
+2016-08-08 10:31:51:886[cInfo        ] Program [7] deleted successfully.
+2016-08-08 10:31:51:888[cProcess     ] ShaderProgram[7]::Shutdown successful!
+2016-08-08 10:31:51:890[cInfo        ] Shader  [11] deleting...
+2016-08-08 10:31:51:894[cInfo        ] Shader  [11] deleted successfully.
+2016-08-08 10:31:51:895[cInfo        ] Shader  [12] deleting...
+2016-08-08 10:31:51:896[cInfo        ] Shader  [12] deleted successfully.
+2016-08-08 10:31:51:899[Info         ] All shaders deleted successfully.
+2016-08-08 10:31:51:899[cInfo        ] Program [10] deleted successfully.
+2016-08-08 10:31:51:900[cProcess     ] ShaderProgram[10]::Shutdown successful!
+2016-08-08 10:31:51:902[cInfo        ] Shader  [14] deleting...
+2016-08-08 10:31:51:906[cInfo        ] Shader  [14] deleted successfully.
+2016-08-08 10:31:51:907[cInfo        ] Shader  [15] deleting...
+2016-08-08 10:31:51:909[cInfo        ] Shader  [15] deleted successfully.
+2016-08-08 10:31:51:912[Info         ] All shaders deleted successfully.
+2016-08-08 10:31:51:912[cInfo        ] Program [13] deleted successfully.
+2016-08-08 10:31:51:914[cProcess     ] ShaderProgram[13]::Shutdown successful!
+2016-08-08 10:31:51:916[cProcess     ] MyWindow::Shutdown() successful!
+2016-08-08 10:31:51:917[cProcess     ] BodaciousQuest::Shutdown() successful.
+2016-08-08 10:31:51:926[Process      ] ConfigReader shut down successfully
+2016-08-08 10:31:51:926[Process      ] GameLogger::ShutDown() successful

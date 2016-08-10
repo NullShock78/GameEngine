@@ -1,0 +1,453 @@
+2016-08-08 11:31:02:966[Process      ] GameLogger::Initialize() opened log file [..\Data\LogFiles\2016-08-08 11-31-02.BodaciousQuest.log] for writing
+2016-08-08 11:31:02:966[Info         ] GameLogger::Initialize() successful
+2016-08-08 11:31:02:966[Process      ] ConfigReader opened [..\Data\BodaciousQuest.config] successfully
+2016-08-08 11:31:02:966[Info         ] ConfigReader initialized successfully
+2016-08-08 11:31:02:966[Info         ] Valid KVP [BodaciousQuest.ShowFullScreen] [false] added
+2016-08-08 11:31:02:966[Info         ] Valid KVP [BodaciousQuest.FpsInterval] [5.0] added
+2016-08-08 11:31:02:967[Info         ] Valid KVP [BodaciousQuest.EnableControls] [true] added
+2016-08-08 11:31:02:967[Info         ] Valid KVP [BodaciousQuest.LoadCubeFirst] [true] added
+2016-08-08 11:31:02:967[Info         ] Valid KVP [BodaciousQuest.CameraWalkMode] [false] added
+2016-08-08 11:31:02:967[Info         ] Valid KVP [BodaciousQuest.GridSize] [40] added
+2016-08-08 11:31:02:967[Info         ] Valid KVP [ObjConverter.Mode.VertexType] [pn] added
+2016-08-08 11:31:02:967[Info         ] Valid KVP [ObjConverter.Mode.Analyze] [false] added
+2016-08-08 11:31:02:967[Info         ] Valid KVP [ObjConverter.Model] [Chicken] added
+2016-08-08 11:31:02:967[Info         ] Valid KVP [ObjConverter.Color] [random] added
+2016-08-08 11:31:02:967[Info         ] Valid KVP [ObjConverter.Obj.InputFileFolder] [..\\Data\\Objs\\] added
+2016-08-08 11:31:02:967[Info         ] Valid KVP [ObjConverter.Scene.OutputFileFolder] [..\\Data\\Scenes\\] added
+2016-08-08 11:31:02:967[Info         ] Valid KVP [ObjConverter.Model.Dargon.NumVerts] [57967] added
+2016-08-08 11:31:02:967[Info         ] Valid KVP [ObjConverter.Model.Dargon.NumIndices] [337824] added
+2016-08-08 11:31:02:967[Info         ] Valid KVP [ObjConverter.Model.Dargon.NumTexCoords] [60175] added
+2016-08-08 11:31:02:967[Info         ] Valid KVP [ObjConverter.Model.Dargon.NumNormals] [0] added
+2016-08-08 11:31:02:967[Info         ] Valid KVP [ObjConverter.Model.Pyramid.NumVerts] [5] added
+2016-08-08 11:31:02:967[Info         ] Valid KVP [ObjConverter.Model.Pyramid.NumIndices] [18] added
+2016-08-08 11:31:02:967[Info         ] Valid KVP [ObjConverter.Model.Pyramid.NumTexCoords] [10] added
+2016-08-08 11:31:02:967[Info         ] Valid KVP [ObjConverter.Model.Pyramid.NumNormals] [16] added
+2016-08-08 11:31:02:967[Info         ] Valid KVP [ObjConverter.Model.AIWorld.NumVerts] [1957] added
+2016-08-08 11:31:02:967[Info         ] Valid KVP [ObjConverter.Model.AIWorld.NumIndices] [8718] added
+2016-08-08 11:31:02:967[Info         ] Valid KVP [ObjConverter.Model.AIWorld.NumTexCoords] [4186] added
+2016-08-08 11:31:02:967[Info         ] Valid KVP [ObjConverter.Model.AIWorld.NumNormals] [5418] added
+2016-08-08 11:31:02:967[Info         ] Valid KVP [ObjConverter.Model.GameWeapon.NumVerts] [2068] added
+2016-08-08 11:31:02:967[Info         ] Valid KVP [ObjConverter.Model.GameWeapon.NumIndices] [9894] added
+2016-08-08 11:31:02:967[Info         ] Valid KVP [ObjConverter.Model.GameWeapon.NumTexCoords] [0] added
+2016-08-08 11:31:02:967[Info         ] Valid KVP [ObjConverter.Model.GameWeapon.NumNormals] [0] added
+2016-08-08 11:31:02:967[Info         ] Valid KVP [ObjConverter.Model.Chicken.NumVerts] [224] added
+2016-08-08 11:31:02:967[Info         ] Valid KVP [ObjConverter.Model.Chicken.NumIndices] [1374] added
+2016-08-08 11:31:02:967[Info         ] Valid KVP [ObjConverter.Model.Chicken.NumTexCoords] [472] added
+2016-08-08 11:31:02:967[Info         ] Valid KVP [ObjConverter.Model.Chicken.NumNormals] [565] added
+2016-08-08 11:31:03:072[Process      ] ShaderManager Initialized successfully
+2016-08-08 11:31:03:073[cInfo        ] Shader Init started
+2016-08-08 11:31:03:074[cInfo        ] Shader Program created.
+2016-08-08 11:31:03:076[cProcess     ] ShaderProgram::Initialize() successful!
+2016-08-08 11:31:03:080[Debug        ] File [..\Data\shaders\debug.vert.shader] Opened successfully! Buffer Length:[291]
+2016-08-08 11:31:03:080[Debug        ] Shader file [..\Data\shaders\debug.vert.shader] contents:
+//BEGIN
+#version 430 core
+
+layout(location = 0)  in vec3 vPosition;
+
+layout(location = 15) uniform vec3 colorin;
+layout(location = 16) uniform mat4 MAT;
+
+out vec4 color;
+
+void main()
+{
+	vec4 vertPos = vec4(vPosition, 1.0);
+	gl_Position = MAT *  vertPos;
+	color = vec4(colorin, 1.0);
+}
+//END
+
+2016-08-08 11:31:03:080[Debug        ]  ShaderProgram::AddShader() file with data was read in
+2016-08-08 11:31:03:080[Debug        ] ShaderProgram::AddShader() : glShaderSource() successful
+2016-08-08 11:31:03:080[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 11:31:03:082[Info         ] ShaderProgram::CheckShaderCompileStatus(2) successful.
+2016-08-08 11:31:03:082[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 11:31:03:084[cInfo        ] ShaderInfo saved successfully.
+2016-08-08 11:31:03:085[cDebug       ] ShaderProgram::AddShader() : glAttachShader() successful
+2016-08-08 11:31:03:089[Info         ] ShaderProgram::AddShader [2] successful.
+2016-08-08 11:31:03:090[Debug        ] File [..\Data\shaders\debug.frag.shader] Opened successfully! Buffer Length:[104]
+2016-08-08 11:31:03:090[Debug        ] Shader file [..\Data\shaders\debug.frag.shader] contents:
+//BEGIN
+#version 430 core
+
+
+in  vec4 color;
+out vec4 outColor;
+
+void main()
+{
+	outColor = color;
+}
+
+
+//END
+
+2016-08-08 11:31:03:090[Debug        ]  ShaderProgram::AddShader() file with data was read in
+2016-08-08 11:31:03:090[Debug        ] ShaderProgram::AddShader() : glShaderSource() successful
+2016-08-08 11:31:03:090[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 11:31:03:093[Info         ] ShaderProgram::CheckShaderCompileStatus(3) successful.
+2016-08-08 11:31:03:093[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 11:31:03:098[cInfo        ] ShaderInfo saved successfully.
+2016-08-08 11:31:03:099[cDebug       ] ShaderProgram::AddShader() : glAttachShader() successful
+2016-08-08 11:31:03:102[Info         ] ShaderProgram::AddShader [3] successful.
+2016-08-08 11:31:03:103[cInfo        ] CheckProgramStatus() successful!
+2016-08-08 11:31:03:105[cInfo        ] CheckProgramStatus() successful!
+2016-08-08 11:31:03:107[cInfo        ] Shader Init started
+2016-08-08 11:31:03:113[cInfo        ] Shader Program created.
+2016-08-08 11:31:03:115[cProcess     ] ShaderProgram::Initialize() successful!
+2016-08-08 11:31:03:117[Debug        ] File [..\Data\shaders\play.vert.shader] Opened successfully! Buffer Length:[343]
+2016-08-08 11:31:03:117[Debug        ] Shader file [..\Data\shaders\play.vert.shader] contents:
+//BEGIN
+#version 430 core
+
+layout (location = 0)  in vec3 vPosition;
+layout (location = 1)  in vec3 vColor;
+layout (location = 15) uniform vec3 colorin;
+layout (location = 16) uniform mat4 MAT;
+
+out vec4 color;
+
+void main()
+{
+	vec4 vertPos = vec4(vPosition, 1.0);
+	gl_Position = MAT *  vertPos;
+	color = vec4((vColor + colorin), 1.0);
+}
+//END
+
+2016-08-08 11:31:03:117[Debug        ]  ShaderProgram::AddShader() file with data was read in
+2016-08-08 11:31:03:117[Debug        ] ShaderProgram::AddShader() : glShaderSource() successful
+2016-08-08 11:31:03:117[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 11:31:03:120[Info         ] ShaderProgram::CheckShaderCompileStatus(5) successful.
+2016-08-08 11:31:03:120[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 11:31:03:122[cInfo        ] ShaderInfo saved successfully.
+2016-08-08 11:31:03:124[cDebug       ] ShaderProgram::AddShader() : glAttachShader() successful
+2016-08-08 11:31:03:131[Info         ] ShaderProgram::AddShader [5] successful.
+2016-08-08 11:31:03:131[Debug        ] File [..\Data\shaders\play.frag.shader] Opened successfully! Buffer Length:[391]
+2016-08-08 11:31:03:132[Debug        ] Shader file [..\Data\shaders\play.frag.shader] contents:
+//BEGIN
+#version 430 core
+
+
+in  vec4 color;
+out vec4 outColor;
+
+void main()
+{
+
+	//if (color.r < .7) discard;
+	outColor = color;
+
+	//if(((gl_FragCoord.x  > 600)&& (gl_FragCoord.y < 300)) || ((gl_FragCoord.y < 300)  && (gl_FragCoord.x  < 600) )) {
+	//discard;
+	//}
+
+	//vec2 scrPos = vec2(gl_FragCoord) - vec2(350,150);
+	//float len =  length(scrPos);
+	//if(len < 50 )discard;
+}
+
+
+//END
+
+2016-08-08 11:31:03:132[Debug        ]  ShaderProgram::AddShader() file with data was read in
+2016-08-08 11:31:03:132[Debug        ] ShaderProgram::AddShader() : glShaderSource() successful
+2016-08-08 11:31:03:132[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 11:31:03:134[Info         ] ShaderProgram::CheckShaderCompileStatus(6) successful.
+2016-08-08 11:31:03:134[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 11:31:03:135[cInfo        ] ShaderInfo saved successfully.
+2016-08-08 11:31:03:137[cDebug       ] ShaderProgram::AddShader() : glAttachShader() successful
+2016-08-08 11:31:03:142[Info         ] ShaderProgram::AddShader [6] successful.
+2016-08-08 11:31:03:144[cInfo        ] CheckProgramStatus() successful!
+2016-08-08 11:31:03:146[cInfo        ] CheckProgramStatus() successful!
+2016-08-08 11:31:03:147[cInfo        ] Shader Init started
+2016-08-08 11:31:03:149[cInfo        ] Shader Program created.
+2016-08-08 11:31:03:151[cProcess     ] ShaderProgram::Initialize() successful!
+2016-08-08 11:31:03:153[Debug        ] File [..\Data\shaders\texture.vert.shader] Opened successfully! Buffer Length:[305]
+2016-08-08 11:31:03:153[Debug        ] Shader file [..\Data\shaders\texture.vert.shader] contents:
+//BEGIN
+#version 430 core
+
+layout (location = 0)  in vec3 vPosition;
+layout (location = 1)  in vec2 vUV;
+
+layout (location = 16) uniform mat4 MAT;
+
+//out data
+out vec2 UV;
+
+//out vec4 color;
+
+void main()
+{
+	vec4 vertPos = vec4(vPosition, 1.0);
+	gl_Position = MAT *  vertPos;
+
+	UV = vUV;
+	
+	
+}
+//END
+
+2016-08-08 11:31:03:153[Debug        ]  ShaderProgram::AddShader() file with data was read in
+2016-08-08 11:31:03:153[Debug        ] ShaderProgram::AddShader() : glShaderSource() successful
+2016-08-08 11:31:03:153[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 11:31:03:155[Info         ] ShaderProgram::CheckShaderCompileStatus(8) successful.
+2016-08-08 11:31:03:155[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 11:31:03:158[cInfo        ] ShaderInfo saved successfully.
+2016-08-08 11:31:03:163[cDebug       ] ShaderProgram::AddShader() : glAttachShader() successful
+2016-08-08 11:31:03:166[Info         ] ShaderProgram::AddShader [8] successful.
+2016-08-08 11:31:03:166[Debug        ] File [..\Data\shaders\texture.frag.shader] Opened successfully! Buffer Length:[484]
+2016-08-08 11:31:03:166[Debug        ] Shader file [..\Data\shaders\texture.frag.shader] contents:
+//BEGIN
+#version 430 core
+
+
+in  vec2 UV;
+out vec4 outColor;
+
+layout(location = 20) uniform sampler2D textureSampler;
+
+void main()
+{
+
+	//if (color.r < .7) discard;
+	outColor = vec4(texture(textureSampler, UV).rgb, 1.0);
+
+	//if(((gl_FragCoord.x  > 600)&& (gl_FragCoord.y < 300)) || ((gl_FragCoord.y < 300)  && (gl_FragCoord.x  < 600) )) {
+	//discard;
+	//}
+
+	//vec2 scrPos = vec2(gl_FragCoord) - vec2(350,150);
+	//float len =  length(scrPos);
+	//if(len < 50 )discard;
+}
+
+
+//END
+
+2016-08-08 11:31:03:166[Debug        ]  ShaderProgram::AddShader() file with data was read in
+2016-08-08 11:31:03:166[Debug        ] ShaderProgram::AddShader() : glShaderSource() successful
+2016-08-08 11:31:03:167[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 11:31:03:168[Info         ] ShaderProgram::CheckShaderCompileStatus(9) successful.
+2016-08-08 11:31:03:168[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 11:31:03:170[cInfo        ] ShaderInfo saved successfully.
+2016-08-08 11:31:03:174[cDebug       ] ShaderProgram::AddShader() : glAttachShader() successful
+2016-08-08 11:31:03:177[Info         ] ShaderProgram::AddShader [9] successful.
+2016-08-08 11:31:03:178[cInfo        ] CheckProgramStatus() successful!
+2016-08-08 11:31:03:180[cInfo        ] CheckProgramStatus() successful!
+2016-08-08 11:31:03:182[cInfo        ] Shader Init started
+2016-08-08 11:31:03:183[cInfo        ] Shader Program created.
+2016-08-08 11:31:03:185[cProcess     ] ShaderProgram::Initialize() successful!
+2016-08-08 11:31:03:187[Debug        ] File [..\Data\shaders\framebuffer.vert.shader] Opened successfully! Buffer Length:[305]
+2016-08-08 11:31:03:187[Debug        ] Shader file [..\Data\shaders\framebuffer.vert.shader] contents:
+//BEGIN
+#version 430 core
+
+layout (location = 0)  in vec3 vPosition;
+layout (location = 1)  in vec2 vUV;
+
+layout (location = 16) uniform mat4 MAT;
+
+//out data
+out vec2 UV;
+
+//out vec4 color;
+
+void main()
+{
+	vec4 vertPos = vec4(vPosition, 1.0);
+	gl_Position = MAT *  vertPos;
+
+	UV = vUV;
+	
+	
+}
+//END
+
+2016-08-08 11:31:03:187[Debug        ]  ShaderProgram::AddShader() file with data was read in
+2016-08-08 11:31:03:187[Debug        ] ShaderProgram::AddShader() : glShaderSource() successful
+2016-08-08 11:31:03:187[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 11:31:03:190[Info         ] ShaderProgram::CheckShaderCompileStatus(11) successful.
+2016-08-08 11:31:03:190[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 11:31:03:193[cInfo        ] ShaderInfo saved successfully.
+2016-08-08 11:31:03:197[cDebug       ] ShaderProgram::AddShader() : glAttachShader() successful
+2016-08-08 11:31:03:200[Info         ] ShaderProgram::AddShader [11] successful.
+2016-08-08 11:31:03:200[Debug        ] File [..\Data\shaders\framebuffer.frag.shader] Opened successfully! Buffer Length:[597]
+2016-08-08 11:31:03:200[Debug        ] Shader file [..\Data\shaders\framebuffer.frag.shader] contents:
+//BEGIN
+#version 430 core
+
+
+in  vec2 UV;
+out vec4 outColor;
+
+layout(location = 20) uniform sampler2D textureSampler;
+
+void main()
+{
+
+	//if (color.r < .7) discard;
+	vec3 tempCol = texture(textureSampler, UV).rgb;
+	if (tempCol == vec3(0, 0, 0)) discard;
+	outColor = vec4(tempCol.r / 2.0f, tempCol.g / 2.0f, tempCol.b / 2.0f, 1.0f);
+
+	//if(((gl_FragCoord.x  > 600)&& (gl_FragCoord.y < 300)) || ((gl_FragCoord.y < 300)  && (gl_FragCoord.x  < 600) )) {
+	//discard;
+	//}
+
+	//vec2 scrPos = vec2(gl_FragCoord) - vec2(350,150);
+	//float len =  length(scrPos);
+	//if(len < 50 )discard;
+}
+
+
+//END
+
+2016-08-08 11:31:03:200[Debug        ]  ShaderProgram::AddShader() file with data was read in
+2016-08-08 11:31:03:200[Debug        ] ShaderProgram::AddShader() : glShaderSource() successful
+2016-08-08 11:31:03:200[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 11:31:03:203[Info         ] ShaderProgram::CheckShaderCompileStatus(12) successful.
+2016-08-08 11:31:03:203[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 11:31:03:206[cInfo        ] ShaderInfo saved successfully.
+2016-08-08 11:31:03:214[cDebug       ] ShaderProgram::AddShader() : glAttachShader() successful
+2016-08-08 11:31:03:216[Info         ] ShaderProgram::AddShader [12] successful.
+2016-08-08 11:31:03:218[cInfo        ] CheckProgramStatus() successful!
+2016-08-08 11:31:03:219[cInfo        ] CheckProgramStatus() successful!
+2016-08-08 11:31:03:221[cInfo        ] Shader Init started
+2016-08-08 11:31:03:222[cInfo        ] Shader Program created.
+2016-08-08 11:31:03:224[cProcess     ] ShaderProgram::Initialize() successful!
+2016-08-08 11:31:03:228[Debug        ] File [..\Data\shaders\lighting.vert.shader] Opened successfully! Buffer Length:[794]
+2016-08-08 11:31:03:228[Debug        ] Shader file [..\Data\shaders\lighting.vert.shader] contents:
+//BEGIN
+#version 430 core
+
+layout (location = 0)  in vec3 vPosition;
+layout (location = 1)  in vec3 vNorm;
+layout(location = 15) uniform vec3 tint;
+layout (location = 16) uniform mat4 MAT;
+
+layout(location = 22) uniform vec3 lightPos;
+//NORMALIZE!!!!
+layout(location = 23) uniform vec3 lightVec;
+//out data
+out vec3 normal;
+out vec3 color;
+
+//out vec4 color;
+
+void main()
+{
+	vec4 vertPos = vec4(vPosition, 1.0);
+	vec4 matPos = MAT *  (vertPos);
+	gl_Position = matPos;
+
+	vec3 matPos3 = vec3(matPos.x, matPos.y, matPos.z);
+
+	//float dist = distance(lightPos, matPos3);
+
+	//DOT
+	float light = (-1.0f*((lightVec.r*vNorm.x) + (lightVec.g*vNorm.y) + (lightVec.r*vNorm.z))) * (dist/5.0f);
+
+	color = vec3(tint.r * light, tint.g * light, tint.b * light);
+	normal = vNorm;
+	
+	
+}
+//END
+
+2016-08-08 11:31:03:228[Debug        ]  ShaderProgram::AddShader() file with data was read in
+2016-08-08 11:31:03:228[Debug        ] ShaderProgram::AddShader() : glShaderSource() successful
+2016-08-08 11:31:03:229[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 11:31:03:231[cInfo        ] ShaderProgram::ShowShaderLogInfo(): glGetShaderInfoLog()
+
+ ERROR: 0:28: 'dist' : undeclared identifier 
+
+
+2016-08-08 11:31:03:242[cError       ] ShaderProgram::AddShader [14] CheckShaderCompileStatus() bad.
+2016-08-08 11:31:03:246[Debug        ] File [..\Data\shaders\lighting.frag.shader] Opened successfully! Buffer Length:[522]
+2016-08-08 11:31:03:246[Debug        ] Shader file [..\Data\shaders\lighting.frag.shader] contents:
+//BEGIN
+#version 430 core
+
+
+in  vec3 normal;
+in  vec3 color;
+out vec4 outColor;
+
+layout(location = 20) uniform sampler2D textureSampler;
+
+void main()
+{
+
+	//if (color.r < .7) discard;
+	outColor = vec4(color, 1.0f);//vec4(normal.x, normal.y, normal.z, 1.0);
+
+	//if(((gl_FragCoord.x  > 600)&& (gl_FragCoord.y < 300)) || ((gl_FragCoord.y < 300)  && (gl_FragCoord.x  < 600) )) {
+	//discard;
+	//}
+
+	//vec2 scrPos = vec2(gl_FragCoord) - vec2(350,150);
+	//float len =  length(scrPos);
+	//if(len < 50 )discard;
+}
+
+
+//END
+
+2016-08-08 11:31:03:246[Debug        ]  ShaderProgram::AddShader() file with data was read in
+2016-08-08 11:31:03:246[Debug        ] ShaderProgram::AddShader() : glShaderSource() successful
+2016-08-08 11:31:03:246[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 11:31:03:249[Info         ] ShaderProgram::CheckShaderCompileStatus(15) successful.
+2016-08-08 11:31:03:249[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 11:31:03:252[cInfo        ] ShaderInfo saved successfully.
+2016-08-08 11:31:03:253[cDebug       ] ShaderProgram::AddShader() : glAttachShader() successful
+2016-08-08 11:31:03:258[Info         ] ShaderProgram::AddShader [15] successful.
+2016-08-08 11:31:03:258[cInfo        ] ShaderProgram::ShowProgramLogInfo(): glGetProgramInfoLog() for pName: [35714]
+
+ Fragment shader contains a user varying, but is linked without a vertex shader.
+Out of resource error.
+
+2016-08-08 11:31:03:269[cInfo        ] Shader  [15] deleting...
+2016-08-08 11:31:03:270[cInfo        ] Shader  [15] deleted successfully.
+2016-08-08 11:31:03:271[Info         ] All shaders deleted successfully.
+2016-08-08 11:31:03:271[cInfo        ] Program [13] deleted successfully.
+2016-08-08 11:31:03:275[cFatalError  ] BodaciousQuest::Initialize(): InitializeGL() failed
+2016-08-08 11:31:03:278[cProcess     ] BufferManager::Shutdown() successful.
+2016-08-08 11:31:03:280[cProcess     ] RenderEngine::Shutdown() successful.
+2016-08-08 11:31:03:281[cProcess     ] Camera::Shutdown() successful.
+2016-08-08 11:31:03:283[cInfo        ] Shader  [2] deleting...
+2016-08-08 11:31:03:287[cInfo        ] Shader  [2] deleted successfully.
+2016-08-08 11:31:03:289[cInfo        ] Shader  [3] deleting...
+2016-08-08 11:31:03:291[cInfo        ] Shader  [3] deleted successfully.
+2016-08-08 11:31:03:294[Info         ] All shaders deleted successfully.
+2016-08-08 11:31:03:294[cInfo        ] Program [1] deleted successfully.
+2016-08-08 11:31:03:296[cProcess     ] ShaderProgram[1]::Shutdown successful!
+2016-08-08 11:31:03:299[cInfo        ] Shader  [5] deleting...
+2016-08-08 11:31:03:303[cInfo        ] Shader  [5] deleted successfully.
+2016-08-08 11:31:03:305[cInfo        ] Shader  [6] deleting...
+2016-08-08 11:31:03:309[cInfo        ] Shader  [6] deleted successfully.
+2016-08-08 11:31:03:310[Info         ] All shaders deleted successfully.
+2016-08-08 11:31:03:310[cInfo        ] Program [4] deleted successfully.
+2016-08-08 11:31:03:311[cProcess     ] ShaderProgram[4]::Shutdown successful!
+2016-08-08 11:31:03:314[cInfo        ] Shader  [8] deleting...
+2016-08-08 11:31:03:318[cInfo        ] Shader  [8] deleted successfully.
+2016-08-08 11:31:03:320[cInfo        ] Shader  [9] deleting...
+2016-08-08 11:31:03:321[cInfo        ] Shader  [9] deleted successfully.
+2016-08-08 11:31:03:325[Info         ] All shaders deleted successfully.
+2016-08-08 11:31:03:325[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:31:03:327[cProcess     ] ShaderProgram[7]::Shutdown successful!
+2016-08-08 11:31:03:330[cInfo        ] Shader  [11] deleting...
+2016-08-08 11:31:03:334[cInfo        ] Shader  [11] deleted successfully.
+2016-08-08 11:31:03:336[cInfo        ] Shader  [12] deleting...
+2016-08-08 11:31:03:337[cInfo        ] Shader  [12] deleted successfully.
+2016-08-08 11:31:03:340[Info         ] All shaders deleted successfully.
+2016-08-08 11:31:03:340[cInfo        ] Program [10] deleted successfully.
+2016-08-08 11:31:03:341[cProcess     ] ShaderProgram[10]::Shutdown successful!
+2016-08-08 11:31:03:343[cProcess     ] MyWindow::Shutdown() successful!
+2016-08-08 11:31:03:345[cProcess     ] BodaciousQuest::Shutdown() successful.
+2016-08-08 11:31:03:347[cFatalError  ] MyWindow::Initialize() Failed to initialize m_game.
+2016-08-08 11:31:03:349[cProcess     ] MyWindow::Shutdown() successful!
+2016-08-08 11:31:03:362[Process      ] ConfigReader shut down successfully
+2016-08-08 11:31:03:362[Process      ] GameLogger::ShutDown() successful

@@ -1,0 +1,1547 @@
+2016-08-08 11:13:34:899[Process      ] GameLogger::Initialize() opened log file [..\Data\LogFiles\2016-08-08 11-13-34.BodaciousQuest.log] for writing
+2016-08-08 11:13:34:899[Info         ] GameLogger::Initialize() successful
+2016-08-08 11:13:34:899[Process      ] ConfigReader opened [..\Data\BodaciousQuest.config] successfully
+2016-08-08 11:13:34:899[Info         ] ConfigReader initialized successfully
+2016-08-08 11:13:34:899[Info         ] Valid KVP [BodaciousQuest.ShowFullScreen] [false] added
+2016-08-08 11:13:34:899[Info         ] Valid KVP [BodaciousQuest.FpsInterval] [5.0] added
+2016-08-08 11:13:34:901[Info         ] Valid KVP [BodaciousQuest.EnableControls] [true] added
+2016-08-08 11:13:34:901[Info         ] Valid KVP [BodaciousQuest.LoadCubeFirst] [true] added
+2016-08-08 11:13:34:901[Info         ] Valid KVP [BodaciousQuest.CameraWalkMode] [false] added
+2016-08-08 11:13:34:901[Info         ] Valid KVP [BodaciousQuest.GridSize] [40] added
+2016-08-08 11:13:34:901[Info         ] Valid KVP [ObjConverter.Mode.VertexType] [pn] added
+2016-08-08 11:13:34:901[Info         ] Valid KVP [ObjConverter.Mode.Analyze] [false] added
+2016-08-08 11:13:34:901[Info         ] Valid KVP [ObjConverter.Model] [Chicken] added
+2016-08-08 11:13:34:901[Info         ] Valid KVP [ObjConverter.Color] [random] added
+2016-08-08 11:13:34:901[Info         ] Valid KVP [ObjConverter.Obj.InputFileFolder] [..\\Data\\Objs\\] added
+2016-08-08 11:13:34:901[Info         ] Valid KVP [ObjConverter.Scene.OutputFileFolder] [..\\Data\\Scenes\\] added
+2016-08-08 11:13:34:901[Info         ] Valid KVP [ObjConverter.Model.Dargon.NumVerts] [57967] added
+2016-08-08 11:13:34:901[Info         ] Valid KVP [ObjConverter.Model.Dargon.NumIndices] [337824] added
+2016-08-08 11:13:34:901[Info         ] Valid KVP [ObjConverter.Model.Dargon.NumTexCoords] [60175] added
+2016-08-08 11:13:34:901[Info         ] Valid KVP [ObjConverter.Model.Dargon.NumNormals] [0] added
+2016-08-08 11:13:34:901[Info         ] Valid KVP [ObjConverter.Model.Pyramid.NumVerts] [5] added
+2016-08-08 11:13:34:901[Info         ] Valid KVP [ObjConverter.Model.Pyramid.NumIndices] [18] added
+2016-08-08 11:13:34:901[Info         ] Valid KVP [ObjConverter.Model.Pyramid.NumTexCoords] [10] added
+2016-08-08 11:13:34:901[Info         ] Valid KVP [ObjConverter.Model.Pyramid.NumNormals] [16] added
+2016-08-08 11:13:34:901[Info         ] Valid KVP [ObjConverter.Model.AIWorld.NumVerts] [1957] added
+2016-08-08 11:13:34:901[Info         ] Valid KVP [ObjConverter.Model.AIWorld.NumIndices] [8718] added
+2016-08-08 11:13:34:901[Info         ] Valid KVP [ObjConverter.Model.AIWorld.NumTexCoords] [4186] added
+2016-08-08 11:13:34:901[Info         ] Valid KVP [ObjConverter.Model.AIWorld.NumNormals] [5418] added
+2016-08-08 11:13:34:902[Info         ] Valid KVP [ObjConverter.Model.GameWeapon.NumVerts] [2068] added
+2016-08-08 11:13:34:902[Info         ] Valid KVP [ObjConverter.Model.GameWeapon.NumIndices] [9894] added
+2016-08-08 11:13:34:902[Info         ] Valid KVP [ObjConverter.Model.GameWeapon.NumTexCoords] [0] added
+2016-08-08 11:13:34:902[Info         ] Valid KVP [ObjConverter.Model.GameWeapon.NumNormals] [0] added
+2016-08-08 11:13:34:902[Info         ] Valid KVP [ObjConverter.Model.Chicken.NumVerts] [224] added
+2016-08-08 11:13:34:902[Info         ] Valid KVP [ObjConverter.Model.Chicken.NumIndices] [1374] added
+2016-08-08 11:13:34:902[Info         ] Valid KVP [ObjConverter.Model.Chicken.NumTexCoords] [472] added
+2016-08-08 11:13:34:902[Info         ] Valid KVP [ObjConverter.Model.Chicken.NumNormals] [565] added
+2016-08-08 11:13:35:014[Process      ] ShaderManager Initialized successfully
+2016-08-08 11:13:35:014[cInfo        ] Shader Init started
+2016-08-08 11:13:35:015[cInfo        ] Shader Program created.
+2016-08-08 11:13:35:016[cProcess     ] ShaderProgram::Initialize() successful!
+2016-08-08 11:13:35:019[Debug        ] File [..\Data\shaders\debug.vert.shader] Opened successfully! Buffer Length:[291]
+2016-08-08 11:13:35:019[Debug        ] Shader file [..\Data\shaders\debug.vert.shader] contents:
+//BEGIN
+#version 430 core
+
+layout(location = 0)  in vec3 vPosition;
+
+layout(location = 15) uniform vec3 colorin;
+layout(location = 16) uniform mat4 MAT;
+
+out vec4 color;
+
+void main()
+{
+	vec4 vertPos = vec4(vPosition, 1.0);
+	gl_Position = MAT *  vertPos;
+	color = vec4(colorin, 1.0);
+}
+//END
+
+2016-08-08 11:13:35:019[Debug        ]  ShaderProgram::AddShader() file with data was read in
+2016-08-08 11:13:35:019[Debug        ] ShaderProgram::AddShader() : glShaderSource() successful
+2016-08-08 11:13:35:020[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 11:13:35:022[Info         ] ShaderProgram::CheckShaderCompileStatus(2) successful.
+2016-08-08 11:13:35:022[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 11:13:35:025[cInfo        ] ShaderInfo saved successfully.
+2016-08-08 11:13:35:029[cDebug       ] ShaderProgram::AddShader() : glAttachShader() successful
+2016-08-08 11:13:35:031[Info         ] ShaderProgram::AddShader [2] successful.
+2016-08-08 11:13:35:032[Debug        ] File [..\Data\shaders\debug.frag.shader] Opened successfully! Buffer Length:[104]
+2016-08-08 11:13:35:032[Debug        ] Shader file [..\Data\shaders\debug.frag.shader] contents:
+//BEGIN
+#version 430 core
+
+
+in  vec4 color;
+out vec4 outColor;
+
+void main()
+{
+	outColor = color;
+}
+
+
+//END
+
+2016-08-08 11:13:35:032[Debug        ]  ShaderProgram::AddShader() file with data was read in
+2016-08-08 11:13:35:032[Debug        ] ShaderProgram::AddShader() : glShaderSource() successful
+2016-08-08 11:13:35:032[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 11:13:35:034[Info         ] ShaderProgram::CheckShaderCompileStatus(3) successful.
+2016-08-08 11:13:35:034[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 11:13:35:036[cInfo        ] ShaderInfo saved successfully.
+2016-08-08 11:13:35:037[cDebug       ] ShaderProgram::AddShader() : glAttachShader() successful
+2016-08-08 11:13:35:040[Info         ] ShaderProgram::AddShader [3] successful.
+2016-08-08 11:13:35:043[cInfo        ] CheckProgramStatus() successful!
+2016-08-08 11:13:35:046[cInfo        ] CheckProgramStatus() successful!
+2016-08-08 11:13:35:047[cInfo        ] Shader Init started
+2016-08-08 11:13:35:048[cInfo        ] Shader Program created.
+2016-08-08 11:13:35:051[cProcess     ] ShaderProgram::Initialize() successful!
+2016-08-08 11:13:35:053[Debug        ] File [..\Data\shaders\play.vert.shader] Opened successfully! Buffer Length:[343]
+2016-08-08 11:13:35:053[Debug        ] Shader file [..\Data\shaders\play.vert.shader] contents:
+//BEGIN
+#version 430 core
+
+layout (location = 0)  in vec3 vPosition;
+layout (location = 1)  in vec3 vColor;
+layout (location = 15) uniform vec3 colorin;
+layout (location = 16) uniform mat4 MAT;
+
+out vec4 color;
+
+void main()
+{
+	vec4 vertPos = vec4(vPosition, 1.0);
+	gl_Position = MAT *  vertPos;
+	color = vec4((vColor + colorin), 1.0);
+}
+//END
+
+2016-08-08 11:13:35:053[Debug        ]  ShaderProgram::AddShader() file with data was read in
+2016-08-08 11:13:35:053[Debug        ] ShaderProgram::AddShader() : glShaderSource() successful
+2016-08-08 11:13:35:053[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 11:13:35:059[Info         ] ShaderProgram::CheckShaderCompileStatus(5) successful.
+2016-08-08 11:13:35:059[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 11:13:35:062[cInfo        ] ShaderInfo saved successfully.
+2016-08-08 11:13:35:063[cDebug       ] ShaderProgram::AddShader() : glAttachShader() successful
+2016-08-08 11:13:35:067[Info         ] ShaderProgram::AddShader [5] successful.
+2016-08-08 11:13:35:067[Debug        ] File [..\Data\shaders\play.frag.shader] Opened successfully! Buffer Length:[391]
+2016-08-08 11:13:35:067[Debug        ] Shader file [..\Data\shaders\play.frag.shader] contents:
+//BEGIN
+#version 430 core
+
+
+in  vec4 color;
+out vec4 outColor;
+
+void main()
+{
+
+	//if (color.r < .7) discard;
+	outColor = color;
+
+	//if(((gl_FragCoord.x  > 600)&& (gl_FragCoord.y < 300)) || ((gl_FragCoord.y < 300)  && (gl_FragCoord.x  < 600) )) {
+	//discard;
+	//}
+
+	//vec2 scrPos = vec2(gl_FragCoord) - vec2(350,150);
+	//float len =  length(scrPos);
+	//if(len < 50 )discard;
+}
+
+
+//END
+
+2016-08-08 11:13:35:067[Debug        ]  ShaderProgram::AddShader() file with data was read in
+2016-08-08 11:13:35:067[Debug        ] ShaderProgram::AddShader() : glShaderSource() successful
+2016-08-08 11:13:35:067[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 11:13:35:069[Info         ] ShaderProgram::CheckShaderCompileStatus(6) successful.
+2016-08-08 11:13:35:069[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 11:13:35:075[cInfo        ] ShaderInfo saved successfully.
+2016-08-08 11:13:35:077[cDebug       ] ShaderProgram::AddShader() : glAttachShader() successful
+2016-08-08 11:13:35:081[Info         ] ShaderProgram::AddShader [6] successful.
+2016-08-08 11:13:35:082[cInfo        ] CheckProgramStatus() successful!
+2016-08-08 11:13:35:083[cInfo        ] CheckProgramStatus() successful!
+2016-08-08 11:13:35:085[cInfo        ] Shader Init started
+2016-08-08 11:13:35:086[cInfo        ] Shader Program created.
+2016-08-08 11:13:35:089[cProcess     ] ShaderProgram::Initialize() successful!
+2016-08-08 11:13:35:092[Debug        ] File [..\Data\shaders\texture.vert.shader] Opened successfully! Buffer Length:[305]
+2016-08-08 11:13:35:092[Debug        ] Shader file [..\Data\shaders\texture.vert.shader] contents:
+//BEGIN
+#version 430 core
+
+layout (location = 0)  in vec3 vPosition;
+layout (location = 1)  in vec2 vUV;
+
+layout (location = 16) uniform mat4 MAT;
+
+//out data
+out vec2 UV;
+
+//out vec4 color;
+
+void main()
+{
+	vec4 vertPos = vec4(vPosition, 1.0);
+	gl_Position = MAT *  vertPos;
+
+	UV = vUV;
+	
+	
+}
+//END
+
+2016-08-08 11:13:35:092[Debug        ]  ShaderProgram::AddShader() file with data was read in
+2016-08-08 11:13:35:092[Debug        ] ShaderProgram::AddShader() : glShaderSource() successful
+2016-08-08 11:13:35:092[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 11:13:35:096[Info         ] ShaderProgram::CheckShaderCompileStatus(8) successful.
+2016-08-08 11:13:35:097[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 11:13:35:099[cInfo        ] ShaderInfo saved successfully.
+2016-08-08 11:13:35:100[cDebug       ] ShaderProgram::AddShader() : glAttachShader() successful
+2016-08-08 11:13:35:104[Info         ] ShaderProgram::AddShader [8] successful.
+2016-08-08 11:13:35:105[Debug        ] File [..\Data\shaders\texture.frag.shader] Opened successfully! Buffer Length:[484]
+2016-08-08 11:13:35:105[Debug        ] Shader file [..\Data\shaders\texture.frag.shader] contents:
+//BEGIN
+#version 430 core
+
+
+in  vec2 UV;
+out vec4 outColor;
+
+layout(location = 20) uniform sampler2D textureSampler;
+
+void main()
+{
+
+	//if (color.r < .7) discard;
+	outColor = vec4(texture(textureSampler, UV).rgb, 1.0);
+
+	//if(((gl_FragCoord.x  > 600)&& (gl_FragCoord.y < 300)) || ((gl_FragCoord.y < 300)  && (gl_FragCoord.x  < 600) )) {
+	//discard;
+	//}
+
+	//vec2 scrPos = vec2(gl_FragCoord) - vec2(350,150);
+	//float len =  length(scrPos);
+	//if(len < 50 )discard;
+}
+
+
+//END
+
+2016-08-08 11:13:35:105[Debug        ]  ShaderProgram::AddShader() file with data was read in
+2016-08-08 11:13:35:105[Debug        ] ShaderProgram::AddShader() : glShaderSource() successful
+2016-08-08 11:13:35:106[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 11:13:35:110[Info         ] ShaderProgram::CheckShaderCompileStatus(9) successful.
+2016-08-08 11:13:35:110[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 11:13:35:114[cInfo        ] ShaderInfo saved successfully.
+2016-08-08 11:13:35:115[cDebug       ] ShaderProgram::AddShader() : glAttachShader() successful
+2016-08-08 11:13:35:119[Info         ] ShaderProgram::AddShader [9] successful.
+2016-08-08 11:13:35:120[cInfo        ] CheckProgramStatus() successful!
+2016-08-08 11:13:35:123[cInfo        ] CheckProgramStatus() successful!
+2016-08-08 11:13:35:125[cInfo        ] Shader Init started
+2016-08-08 11:13:35:129[cInfo        ] Shader Program created.
+2016-08-08 11:13:35:130[cProcess     ] ShaderProgram::Initialize() successful!
+2016-08-08 11:13:35:134[Debug        ] File [..\Data\shaders\framebuffer.vert.shader] Opened successfully! Buffer Length:[305]
+2016-08-08 11:13:35:134[Debug        ] Shader file [..\Data\shaders\framebuffer.vert.shader] contents:
+//BEGIN
+#version 430 core
+
+layout (location = 0)  in vec3 vPosition;
+layout (location = 1)  in vec2 vUV;
+
+layout (location = 16) uniform mat4 MAT;
+
+//out data
+out vec2 UV;
+
+//out vec4 color;
+
+void main()
+{
+	vec4 vertPos = vec4(vPosition, 1.0);
+	gl_Position = MAT *  vertPos;
+
+	UV = vUV;
+	
+	
+}
+//END
+
+2016-08-08 11:13:35:134[Debug        ]  ShaderProgram::AddShader() file with data was read in
+2016-08-08 11:13:35:134[Debug        ] ShaderProgram::AddShader() : glShaderSource() successful
+2016-08-08 11:13:35:134[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 11:13:35:136[Info         ] ShaderProgram::CheckShaderCompileStatus(11) successful.
+2016-08-08 11:13:35:136[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 11:13:35:141[cInfo        ] ShaderInfo saved successfully.
+2016-08-08 11:13:35:143[cDebug       ] ShaderProgram::AddShader() : glAttachShader() successful
+2016-08-08 11:13:35:146[Info         ] ShaderProgram::AddShader [11] successful.
+2016-08-08 11:13:35:146[Debug        ] File [..\Data\shaders\framebuffer.frag.shader] Opened successfully! Buffer Length:[597]
+2016-08-08 11:13:35:147[Debug        ] Shader file [..\Data\shaders\framebuffer.frag.shader] contents:
+//BEGIN
+#version 430 core
+
+
+in  vec2 UV;
+out vec4 outColor;
+
+layout(location = 20) uniform sampler2D textureSampler;
+
+void main()
+{
+
+	//if (color.r < .7) discard;
+	vec3 tempCol = texture(textureSampler, UV).rgb;
+	if (tempCol == vec3(0, 0, 0)) discard;
+	outColor = vec4(tempCol.r / 2.0f, tempCol.g / 2.0f, tempCol.b / 2.0f, 1.0f);
+
+	//if(((gl_FragCoord.x  > 600)&& (gl_FragCoord.y < 300)) || ((gl_FragCoord.y < 300)  && (gl_FragCoord.x  < 600) )) {
+	//discard;
+	//}
+
+	//vec2 scrPos = vec2(gl_FragCoord) - vec2(350,150);
+	//float len =  length(scrPos);
+	//if(len < 50 )discard;
+}
+
+
+//END
+
+2016-08-08 11:13:35:147[Debug        ]  ShaderProgram::AddShader() file with data was read in
+2016-08-08 11:13:35:147[Debug        ] ShaderProgram::AddShader() : glShaderSource() successful
+2016-08-08 11:13:35:147[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 11:13:35:149[Info         ] ShaderProgram::CheckShaderCompileStatus(12) successful.
+2016-08-08 11:13:35:149[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 11:13:35:151[cInfo        ] ShaderInfo saved successfully.
+2016-08-08 11:13:35:152[cDebug       ] ShaderProgram::AddShader() : glAttachShader() successful
+2016-08-08 11:13:35:156[Info         ] ShaderProgram::AddShader [12] successful.
+2016-08-08 11:13:35:158[cInfo        ] CheckProgramStatus() successful!
+2016-08-08 11:13:35:159[cInfo        ] CheckProgramStatus() successful!
+2016-08-08 11:13:35:161[cInfo        ] Shader Init started
+2016-08-08 11:13:35:162[cInfo        ] Shader Program created.
+2016-08-08 11:13:35:164[cProcess     ] ShaderProgram::Initialize() successful!
+2016-08-08 11:13:35:166[Debug        ] File [..\Data\shaders\lighting.vert.shader] Opened successfully! Buffer Length:[783]
+2016-08-08 11:13:35:166[Debug        ] Shader file [..\Data\shaders\lighting.vert.shader] contents:
+//BEGIN
+#version 430 core
+
+layout (location = 0)  in vec3 vPosition;
+layout (location = 1)  in vec3 vNorm;
+layout(location = 15) uniform vec3 tint;
+layout (location = 16) uniform mat4 MAT;
+
+layout(location = 22) uniform vec3 lightPos;
+//NORMALIZE!!!!
+layout(location = 23) uniform vec3 lightVec;
+//out data
+out vec3 normal;
+out vec3 color;
+
+//out vec4 color;
+
+void main()
+{
+	vec4 vertPos = vec4(vPosition, 1.0);
+	vec4 matPos = MAT *  (vertPos);
+	gl_Position = matPos;
+
+	float dist = distance(lightPos, vec3(matPos.x, matPos.y, matPos.z));
+
+	//DOT
+	float light = (dist / 5.0f);// (-1.0f*((lightVec.r*vNorm.x) + (lightVec.g*vNorm.y) + (lightVec.r*vNorm.z))) * (dist/5.0f);
+
+	color = vec3( tint.r * light, tint.g * light,  tint.b * light);
+	normal = vNorm;
+	
+	
+}
+//END
+
+2016-08-08 11:13:35:166[Debug        ]  ShaderProgram::AddShader() file with data was read in
+2016-08-08 11:13:35:166[Debug        ] ShaderProgram::AddShader() : glShaderSource() successful
+2016-08-08 11:13:35:166[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 11:13:35:168[Info         ] ShaderProgram::CheckShaderCompileStatus(14) successful.
+2016-08-08 11:13:35:168[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 11:13:35:171[cInfo        ] ShaderInfo saved successfully.
+2016-08-08 11:13:35:174[cDebug       ] ShaderProgram::AddShader() : glAttachShader() successful
+2016-08-08 11:13:35:176[Info         ] ShaderProgram::AddShader [14] successful.
+2016-08-08 11:13:35:177[Debug        ] File [..\Data\shaders\lighting.frag.shader] Opened successfully! Buffer Length:[522]
+2016-08-08 11:13:35:177[Debug        ] Shader file [..\Data\shaders\lighting.frag.shader] contents:
+//BEGIN
+#version 430 core
+
+
+in  vec3 normal;
+in  vec3 color;
+out vec4 outColor;
+
+layout(location = 20) uniform sampler2D textureSampler;
+
+void main()
+{
+
+	//if (color.r < .7) discard;
+	outColor = vec4(color, 1.0f);//vec4(normal.x, normal.y, normal.z, 1.0);
+
+	//if(((gl_FragCoord.x  > 600)&& (gl_FragCoord.y < 300)) || ((gl_FragCoord.y < 300)  && (gl_FragCoord.x  < 600) )) {
+	//discard;
+	//}
+
+	//vec2 scrPos = vec2(gl_FragCoord) - vec2(350,150);
+	//float len =  length(scrPos);
+	//if(len < 50 )discard;
+}
+
+
+//END
+
+2016-08-08 11:13:35:177[Debug        ]  ShaderProgram::AddShader() file with data was read in
+2016-08-08 11:13:35:177[Debug        ] ShaderProgram::AddShader() : glShaderSource() successful
+2016-08-08 11:13:35:177[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 11:13:35:179[Info         ] ShaderProgram::CheckShaderCompileStatus(15) successful.
+2016-08-08 11:13:35:179[cDebug       ] ShaderProgram::AddShader() : glCompileShader() successful
+2016-08-08 11:13:35:181[cInfo        ] ShaderInfo saved successfully.
+2016-08-08 11:13:35:182[cDebug       ] ShaderProgram::AddShader() : glAttachShader() successful
+2016-08-08 11:13:35:186[Info         ] ShaderProgram::AddShader [15] successful.
+2016-08-08 11:13:35:187[cInfo        ] CheckProgramStatus() successful!
+2016-08-08 11:13:35:189[cInfo        ] CheckProgramStatus() successful!
+2016-08-08 11:13:35:191[cProcess     ] BufferManager::Initialize() successful.
+2016-08-08 11:13:35:193[Info         ] GetAttribLocation [vPosition] successful.
+2016-08-08 11:13:35:193[Info         ] GetUniformLocation [colorin] successful.
+2016-08-08 11:13:35:193[Info         ] GetUniformLocation [MAT] successful.
+2016-08-08 11:13:35:193[cProcess     ] RenderEngine::Initialize() successful.
+2016-08-08 11:13:35:194[cProcess     ] BufferManager::Initialize() successful.
+2016-08-08 11:13:35:196[cInfo        ] 
+-----------------------------------------------------------------------
+ BufferInfo::CreateBuffers()[1] Created buffers:| VERTEX [1] with [1000000] bytes. || INDEX [2] with [1000000] bytes |
+-----------------------------------------------------------------------
+
+2016-08-08 11:13:35:207[cInfo        ] --------BufferInfo::AddMesh() Added mesh successfully-------
+2016-08-08 11:13:35:212[cInfo        ] 
+2016-08-08 11:13:35:212[cInfo        ] --------------------| START BUFFER MESH INFO |-------------------------------------
+2016-08-08 11:13:35:217[cInfo        ] BufferInfo::AddMesh(): NUM VERTS-----------------[4]
+2016-08-08 11:13:35:219[cInfo        ] BufferInfo::AddMesh(): NUM INDICES---------------[6]
+2016-08-08 11:13:35:223[cInfo        ] BufferInfo::AddMesh(): VERT OFFSET---------------[0]
+2016-08-08 11:13:35:225[cInfo        ] BufferInfo::AddMesh(): INDICES OFFSET (BYTES)----[0]
+2016-08-08 11:13:35:226[cInfo        ] --------------------|  END BUFFER MESH INFO  |--------------------------------------
+2016-08-08 11:13:35:229[cInfo        ] 
+
+2016-08-08 11:13:35:232[cProcess     ] BufferManager::Initialize() successful.
+2016-08-08 11:13:35:233[cInfo        ] 
+-----------------------------------------------------------------------
+ BufferInfo::CreateBuffers()[2] Created buffers:| VERTEX [3] with [1000000] bytes. || INDEX [4] with [1000000] bytes |
+-----------------------------------------------------------------------
+
+2016-08-08 11:13:35:244[cInfo        ] --------BufferInfo::AddMesh() Added mesh successfully-------
+2016-08-08 11:13:35:249[cInfo        ] 
+2016-08-08 11:13:35:249[cInfo        ] --------------------| START BUFFER MESH INFO |-------------------------------------
+2016-08-08 11:13:35:255[cInfo        ] BufferInfo::AddMesh(): NUM VERTS-----------------[8]
+2016-08-08 11:13:35:257[cInfo        ] BufferInfo::AddMesh(): NUM INDICES---------------[24]
+2016-08-08 11:13:35:258[cInfo        ] BufferInfo::AddMesh(): VERT OFFSET---------------[0]
+2016-08-08 11:13:35:260[cInfo        ] BufferInfo::AddMesh(): INDICES OFFSET (BYTES)----[0]
+2016-08-08 11:13:35:262[cInfo        ] --------------------|  END BUFFER MESH INFO  |--------------------------------------
+2016-08-08 11:13:35:264[cInfo        ] 
+
+2016-08-08 11:13:35:268[cProcess     ] BufferManager::Initialize() successful.
+2016-08-08 11:13:35:272[cInfo        ] 
+-----------------------------------------------------------------------
+ BufferInfo::CreateBuffers()[3] Created buffers:| VERTEX [5] with [1000000] bytes. || INDEX [6] with [1000000] bytes |
+-----------------------------------------------------------------------
+
+2016-08-08 11:13:35:282[cInfo        ] --------BufferInfo::AddMesh() Added mesh successfully-------
+2016-08-08 11:13:35:287[cInfo        ] 
+2016-08-08 11:13:35:288[cInfo        ] --------------------| START BUFFER MESH INFO |-------------------------------------
+2016-08-08 11:13:35:292[cInfo        ] BufferInfo::AddMesh(): NUM VERTS-----------------[36]
+2016-08-08 11:13:35:294[cInfo        ] BufferInfo::AddMesh(): NUM INDICES---------------[0]
+2016-08-08 11:13:35:296[cInfo        ] BufferInfo::AddMesh(): VERT OFFSET---------------[0]
+2016-08-08 11:13:35:298[cInfo        ] BufferInfo::AddMesh(): INDICES OFFSET (BYTES)----[0]
+2016-08-08 11:13:35:300[cInfo        ] --------------------|  END BUFFER MESH INFO  |--------------------------------------
+2016-08-08 11:13:35:303[cInfo        ] 
+
+2016-08-08 11:13:35:306[cInfo        ] --------BufferInfo::AddMesh() Added mesh successfully-------
+2016-08-08 11:13:35:309[cInfo        ] 
+2016-08-08 11:13:35:310[cInfo        ] --------------------| START BUFFER MESH INFO |-------------------------------------
+2016-08-08 11:13:35:315[cInfo        ] BufferInfo::AddMesh(): NUM VERTS-----------------[24]
+2016-08-08 11:13:35:316[cInfo        ] BufferInfo::AddMesh(): NUM INDICES---------------[36]
+2016-08-08 11:13:35:318[cInfo        ] BufferInfo::AddMesh(): VERT OFFSET---------------[36]
+2016-08-08 11:13:35:320[cInfo        ] BufferInfo::AddMesh(): INDICES OFFSET (BYTES)----[0]
+2016-08-08 11:13:35:322[cInfo        ] --------------------|  END BUFFER MESH INFO  |--------------------------------------
+2016-08-08 11:13:35:325[cInfo        ] 
+
+2016-08-08 11:13:35:334[cInfo        ] --------BufferInfo::AddMesh() Added mesh successfully-------
+2016-08-08 11:13:35:338[cInfo        ] 
+2016-08-08 11:13:35:339[cInfo        ] --------------------| START BUFFER MESH INFO |-------------------------------------
+2016-08-08 11:13:35:344[cInfo        ] BufferInfo::AddMesh(): NUM VERTS-----------------[1536]
+2016-08-08 11:13:35:346[cInfo        ] BufferInfo::AddMesh(): NUM INDICES---------------[3072]
+2016-08-08 11:13:35:348[cInfo        ] BufferInfo::AddMesh(): VERT OFFSET---------------[8]
+2016-08-08 11:13:35:350[cInfo        ] BufferInfo::AddMesh(): INDICES OFFSET (BYTES)----[48]
+2016-08-08 11:13:35:352[cInfo        ] --------------------|  END BUFFER MESH INFO  |--------------------------------------
+2016-08-08 11:13:35:356[cInfo        ] 
+
+2016-08-08 11:13:35:360[cProcess     ] BufferManager::Initialize() successful.
+2016-08-08 11:13:35:363[cInfo        ] 
+-----------------------------------------------------------------------
+ BufferInfo::CreateBuffers()[4] Created buffers:| VERTEX [7] with [1000000] bytes. || INDEX [8] with [1000000] bytes |
+-----------------------------------------------------------------------
+
+2016-08-08 11:13:35:374[cInfo        ] --------BufferInfo::AddMesh() Added mesh successfully-------
+2016-08-08 11:13:35:378[cInfo        ] 
+2016-08-08 11:13:35:379[cInfo        ] --------------------| START BUFFER MESH INFO |-------------------------------------
+2016-08-08 11:13:35:384[cInfo        ] BufferInfo::AddMesh(): NUM VERTS-----------------[164]
+2016-08-08 11:13:35:386[cInfo        ] BufferInfo::AddMesh(): NUM INDICES---------------[0]
+2016-08-08 11:13:35:390[cInfo        ] BufferInfo::AddMesh(): VERT OFFSET---------------[0]
+2016-08-08 11:13:35:391[cInfo        ] BufferInfo::AddMesh(): INDICES OFFSET (BYTES)----[0]
+2016-08-08 11:13:35:393[cInfo        ] --------------------|  END BUFFER MESH INFO  |--------------------------------------
+2016-08-08 11:13:35:396[cInfo        ] 
+
+2016-08-08 11:13:35:399[cProcess     ] ShapeGenerator initialized successfully.
+2016-08-08 11:13:35:400[cProcess     ] Camera::Initialize() successful.
+2016-08-08 11:13:35:401[cProcess     ] Keyboard::Initialize() successful
+2016-08-08 11:13:35:403[cProcess     ] Camera::Initialize() successful.
+2016-08-08 11:13:35:404[cInfo        ] BufferInfo [1] failed to add gob. Check if gob matches?
+2016-08-08 11:13:35:407[cInfo        ] BufferInfo [2] failed to add gob. Check if gob matches?
+2016-08-08 11:13:35:408[cInfo        ] BufferInfo [1] failed to add gob. Check if gob matches?
+2016-08-08 11:13:35:410[cInfo        ] BufferInfo [1] failed to add gob. Check if gob matches?
+2016-08-08 11:13:35:412[cInfo        ] BufferInfo [1] failed to add gob. Check if gob matches?
+2016-08-08 11:13:35:413[cInfo        ] BufferInfo [2] failed to add gob. Check if gob matches?
+2016-08-08 11:13:35:415[cInfo        ] BufferInfo [1] failed to add gob. Check if gob matches?
+2016-08-08 11:13:35:417[cInfo        ] BufferInfo [1] failed to add gob. Check if gob matches?
+2016-08-08 11:13:35:418[cInfo        ] BufferInfo [1] failed to add gob. Check if gob matches?
+2016-08-08 11:13:35:420[cInfo        ] BufferInfo [2] failed to add gob. Check if gob matches?
+2016-08-08 11:13:35:424[cInfo        ] BufferInfo [3] failed to add gob. Check if gob matches?
+2016-08-08 11:13:35:426[cProcess     ] BufferManager::Initialize() successful.
+2016-08-08 11:13:35:430[cInfo        ] 
+-----------------------------------------------------------------------
+ BufferInfo::CreateBuffers()[5] Created buffers:| VERTEX [9] with [1000000] bytes. || INDEX [10] with [1000000] bytes |
+-----------------------------------------------------------------------
+
+2016-08-08 11:13:35:440[cInfo        ] --------BufferInfo::AddMesh() Added mesh successfully-------
+2016-08-08 11:13:35:445[cInfo        ] 
+2016-08-08 11:13:35:445[cInfo        ] --------------------| START BUFFER MESH INFO |-------------------------------------
+2016-08-08 11:13:35:451[cInfo        ] BufferInfo::AddMesh(): NUM VERTS-----------------[1374]
+2016-08-08 11:13:35:453[cInfo        ] BufferInfo::AddMesh(): NUM INDICES---------------[0]
+2016-08-08 11:13:35:456[cInfo        ] BufferInfo::AddMesh(): VERT OFFSET---------------[0]
+2016-08-08 11:13:35:458[cInfo        ] BufferInfo::AddMesh(): INDICES OFFSET (BYTES)----[0]
+2016-08-08 11:13:35:460[cInfo        ] --------------------|  END BUFFER MESH INFO  |--------------------------------------
+2016-08-08 11:13:35:462[cInfo        ] 
+
+2016-08-08 11:13:35:466[Info         ] ShapeGenerator::ReadSceneFile(): Added new scene [..\Data\Scenes\Chicken.pn.scene] successfully.
+2016-08-08 11:13:35:466[cInfo        ] BufferInfo [1] failed to add gob. Check if gob matches?
+2016-08-08 11:13:35:469[cInfo        ] BufferInfo [2] failed to add gob. Check if gob matches?
+2016-08-08 11:13:35:473[cInfo        ] BufferInfo [3] failed to add gob. Check if gob matches?
+2016-08-08 11:13:35:475[cInfo        ] BufferInfo [4] failed to add gob. Check if gob matches?
+2016-08-08 11:13:35:485[cProcess     ] BufferManager::Initialize() successful.
+2016-08-08 11:13:35:488[cInfo        ] 
+-----------------------------------------------------------------------
+ BufferInfo::CreateBuffers()[6] Created buffers:| VERTEX [11] with [6756480] bytes. || INDEX [12] with [0] bytes |
+-----------------------------------------------------------------------
+
+2016-08-08 11:13:35:504[cInfo        ] --------BufferInfo::AddMesh() Added mesh successfully-------
+2016-08-08 11:13:35:507[cInfo        ] 
+2016-08-08 11:13:35:509[cInfo        ] --------------------| START BUFFER MESH INFO |-------------------------------------
+2016-08-08 11:13:35:515[cInfo        ] BufferInfo::AddMesh(): NUM VERTS-----------------[337824]
+2016-08-08 11:13:35:517[cInfo        ] BufferInfo::AddMesh(): NUM INDICES---------------[0]
+2016-08-08 11:13:35:519[cInfo        ] BufferInfo::AddMesh(): VERT OFFSET---------------[0]
+2016-08-08 11:13:35:523[cInfo        ] BufferInfo::AddMesh(): INDICES OFFSET (BYTES)----[0]
+2016-08-08 11:13:35:525[cInfo        ] --------------------|  END BUFFER MESH INFO  |--------------------------------------
+2016-08-08 11:13:35:528[cInfo        ] 
+
+2016-08-08 11:13:35:553[Info         ] ShapeGenerator::ReadSceneFile(): Added new scene [..\Data\Scenes\Dargon.pt.scene] successfully.
+2016-08-08 11:13:35:553[cInfo        ] BufferInfo [1] failed to add gob. Check if gob matches?
+2016-08-08 11:13:35:557[cInfo        ] BufferInfo [2] failed to add gob. Check if gob matches?
+2016-08-08 11:13:35:560[cInfo        ] BufferInfo [3] failed to add gob. Check if gob matches?
+2016-08-08 11:13:35:562[cInfo        ] BufferInfo [4] failed to add gob. Check if gob matches?
+2016-08-08 11:13:35:564[cInfo        ] BufferInfo [5] failed to add gob. Check if gob matches?
+2016-08-08 11:13:35:566[cProcess     ] BodaciousQuest::Initialize() successful.
+2016-08-08 11:13:35:568[Process      ] GameTime::Initialize() ok
+
+2016-08-08 11:13:35:568[cProcess     ] MyWindow::Initialize() successful!
+2016-08-08 11:13:35:593[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:35:598[cInfo        ] Shader  [8] deleting...
+2016-08-08 11:13:35:601[cInfo        ] Shader  [8] deleted successfully.
+2016-08-08 11:13:35:603[cInfo        ] Shader  [9] deleting...
+2016-08-08 11:13:35:606[cInfo        ] Shader  [9] deleted successfully.
+2016-08-08 11:13:35:607[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:35:607[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:35:609[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:35:615[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:35:618[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:35:618[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:35:622[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:35:627[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:35:630[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:35:630[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:35:633[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:35:639[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:35:643[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:35:643[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:35:646[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:35:651[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:35:655[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:35:655[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:35:657[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:35:662[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:35:665[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:35:665[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:35:668[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:35:673[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:35:677[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:35:677[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:35:680[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:35:685[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:35:688[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:35:688[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:35:691[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:35:696[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:35:699[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:35:699[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:35:702[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:35:708[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:35:712[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:35:712[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:35:715[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:35:720[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:35:723[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:35:723[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:35:726[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:35:731[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:35:734[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:35:734[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:35:738[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:35:743[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:35:746[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:35:746[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:35:749[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:35:754[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:35:758[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:35:758[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:35:761[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:35:766[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:35:769[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:35:770[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:35:773[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:35:778[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:35:783[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:35:783[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:35:785[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:35:792[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:35:795[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:35:795[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:35:798[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:35:802[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:35:806[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:35:806[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:35:809[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:35:814[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:35:819[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:35:819[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:35:822[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:35:827[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:35:830[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:35:830[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:35:833[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:35:838[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:35:842[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:35:842[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:35:845[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:35:849[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:35:853[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:35:853[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:35:857[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:35:861[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:35:865[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:35:865[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:35:868[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:35:874[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:35:878[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:35:878[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:35:881[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:35:886[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:35:890[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:35:890[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:35:893[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:35:898[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:35:901[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:35:901[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:35:905[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:35:911[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:35:914[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:35:914[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:35:917[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:35:923[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:35:927[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:35:927[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:35:930[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:35:935[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:35:938[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:35:938[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:35:941[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:35:946[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:35:949[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:35:949[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:35:952[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:35:957[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:35:960[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:35:960[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:35:963[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:35:968[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:35:972[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:35:972[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:35:975[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:35:980[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:35:983[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:35:983[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:35:986[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:35:991[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:35:994[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:35:994[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:35:997[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:002[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:007[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:007[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:009[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:014[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:018[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:018[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:021[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:026[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:029[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:029[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:032[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:038[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:041[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:041[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:044[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:049[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:053[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:053[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:057[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:062[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:065[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:065[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:068[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:073[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:076[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:076[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:079[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:084[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:089[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:089[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:091[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:096[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:099[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:099[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:102[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:108[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:111[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:112[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:115[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:120[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:124[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:124[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:126[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:131[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:135[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:135[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:138[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:143[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:146[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:146[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:149[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:154[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:158[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:158[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:161[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:166[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:169[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:169[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:173[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:178[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:181[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:181[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:184[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:189[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:193[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:193[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:196[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:201[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:205[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:205[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:207[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:212[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:216[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:216[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:219[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:226[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:229[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:229[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:232[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:237[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:241[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:241[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:244[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:248[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:251[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:251[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:254[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:259[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:262[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:262[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:265[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:271[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:275[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:275[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:278[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:282[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:286[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:286[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:290[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:295[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:298[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:298[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:301[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:306[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:311[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:311[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:313[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:318[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:322[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:322[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:324[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:329[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:332[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:332[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:335[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:341[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:344[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:345[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:347[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:352[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:356[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:356[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:359[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:363[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:367[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:367[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:370[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:375[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:378[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:378[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:381[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:386[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:389[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:389[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:392[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:397[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:401[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:401[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:404[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:409[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:413[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:413[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:416[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:424[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:428[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:428[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:431[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:437[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:441[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:441[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:444[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:448[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:452[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:452[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:456[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:461[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:464[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:464[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:467[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:473[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:476[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:476[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:479[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:484[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:488[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:488[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:490[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:496[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:499[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:499[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:503[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:508[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:512[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:512[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:515[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:520[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:523[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:523[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:526[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:531[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:534[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:534[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:537[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:542[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:545[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:545[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:548[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:553[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:557[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:557[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:560[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:565[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:569[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:569[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:572[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:577[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:581[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:581[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:584[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:590[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:594[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:594[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:597[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:602[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:605[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:605[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:608[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:613[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:615[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:615[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:618[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:624[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:627[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:627[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:630[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:635[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:638[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:638[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:639[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:644[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:647[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:647[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:650[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:656[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:660[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:660[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:663[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:667[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:673[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:673[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:674[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:679[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:682[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:682[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:685[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:691[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:695[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:695[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:698[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:703[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:707[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:707[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:710[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:715[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:718[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:718[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:721[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:726[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:729[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:729[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:732[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:737[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:741[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:741[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:744[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:749[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:753[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:753[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:756[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:761[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:764[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:764[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:767[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:773[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:776[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:776[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:779[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:784[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:788[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:788[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:790[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:795[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:798[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:798[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:801[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:807[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:810[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:810[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:813[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:817[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:822[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:822[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:824[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:829[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:832[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:832[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:835[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:841[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:844[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:844[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:847[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:852[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:855[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:855[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:858[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:863[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:867[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:867[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:870[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:875[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:879[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:879[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:882[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:887[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:891[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:891[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:894[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:899[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:903[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:903[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:906[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:912[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:916[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:916[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:919[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:924[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:927[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:928[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:930[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:935[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:939[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:939[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:942[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:946[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:951[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:951[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:954[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:959[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:962[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:962[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:965[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:970[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:974[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:974[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:977[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:982[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:984[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:985[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:988[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:36:993[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:36:996[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:36:996[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:36:999[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:004[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:008[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:008[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:011[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:015[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:018[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:018[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:022[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:026[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:031[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:031[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:033[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:039[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:043[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:043[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:047[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:052[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:056[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:056[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:059[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:064[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:068[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:068[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:071[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:076[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:079[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:079[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:082[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:088[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:091[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:091[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:094[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:099[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:102[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:102[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:105[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:110[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:113[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:113[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:116[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:121[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:125[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:125[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:127[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:132[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:135[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:135[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:138[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:143[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:147[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:147[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:150[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:155[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:158[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:158[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:161[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:167[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:169[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:169[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:173[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:178[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:181[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:181[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:184[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:190[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:193[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:193[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:196[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:201[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:205[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:205[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:206[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:211[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:214[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:214[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:217[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:223[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:226[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:226[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:228[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:234[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:238[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:238[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:241[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:246[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:250[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:250[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:254[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:259[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:262[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:262[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:265[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:270[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:274[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:274[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:277[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:281[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:284[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:284[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:288[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:293[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:297[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:297[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:300[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:306[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:309[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:309[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:312[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:317[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:323[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:323[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:325[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:331[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:334[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:334[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:337[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:343[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:346[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:346[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:349[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:356[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:360[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:360[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:363[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:368[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:371[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:371[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:374[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:379[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:382[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:383[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:386[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:393[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:397[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:397[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:401[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:407[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:410[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:410[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:413[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:418[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:421[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:421[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:424[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:429[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:432[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:432[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:435[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:441[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:444[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:444[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:447[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:452[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:456[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:456[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:459[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:464[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:467[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:467[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:471[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:476[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:478[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:478[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:481[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:486[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:490[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:490[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:493[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:498[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:502[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:502[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:505[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:510[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:513[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:514[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:516[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:522[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:525[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:525[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:528[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:533[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:539[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:539[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:541[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:546[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:549[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:549[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:552[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:559[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:562[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:562[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:565[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:571[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:574[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:574[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:577[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:582[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:585[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:585[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:589[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:593[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:597[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:597[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:600[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:606[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:610[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:610[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:613[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:618[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:621[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:621[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:623[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:628[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:631[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:631[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:634[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:640[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:643[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:643[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:646[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:652[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:656[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:656[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:659[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:665[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:668[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:668[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:671[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:676[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:680[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:680[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:683[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:688[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:692[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:692[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:695[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:700[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:706[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:706[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:707[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:712[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:715[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:715[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:718[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:724[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:727[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:727[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:730[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:736[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:739[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:739[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:742[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:747[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:751[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:751[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:754[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:759[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:762[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:762[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:765[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:769[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:773[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:773[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:776[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:781[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:786[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:787[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:791[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:797[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:801[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:801[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:805[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:809[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:813[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:813[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:816[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:821[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:825[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:825[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:828[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:833[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:836[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:836[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:841[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:846[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:849[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:849[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:852[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:857[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:860[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:860[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:863[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:868[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:872[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:872[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:875[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:880[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:883[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:883[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:886[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:37:891[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:37:894[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:37:895[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:37:897[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:38:067[cFatalError  ] ShaderProgram::LinkAndUseProgram(): glUseProgram() failed.
+ GLErrorMsg:(GLInvalid Operation).
+2016-08-08 11:13:38:072[Info         ] All shaders deleted successfully.
+2016-08-08 11:13:38:072[cInfo        ] Program [7] deleted successfully.
+2016-08-08 11:13:38:075[cProgError   ] ShaderManager::UseShader() failed
+2016-08-08 11:13:38:085[Process      ] ConfigReader shut down successfully
+2016-08-08 11:13:38:085[Process      ] GameLogger::ShutDown() successful
